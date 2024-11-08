@@ -38,7 +38,6 @@ public class LoginController {
 
         boolean authenticationStatus = false;
 
-        label:
         for (UsersOfTheSystem user : users) {
             if (username.compareTo(user.getUsername()) == 0 && password.compareTo(user.getPassword()) == 0) {
                 authenticationStatus = true;
