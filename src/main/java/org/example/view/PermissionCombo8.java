@@ -18,7 +18,7 @@ public class PermissionCombo8 extends BorderPane {
     private final Button logout = new Button("");
     private final Button sellBooks = new Button("");
     private final Button manageBills = new Button("");
-
+    @SuppressWarnings("unused")
     public PermissionCombo8(Stage stage) {
         sellBooks.setPrefWidth(200);
         sellBooks.setPrefHeight(200);

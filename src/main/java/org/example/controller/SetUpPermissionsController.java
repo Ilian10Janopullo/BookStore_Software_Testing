@@ -141,158 +141,190 @@ public class SetUpPermissionsController {
     }
 
     public void check(){
-        if (permissionsCombo.get(0).equals("PermissionCombo15Controller")) {
-            this.view.setManageStockManager(true);
-            this.view.setManageSellsManager(true);
-            this.view.setManageBillsManager(true);
-            this.view.setCheckUsersManager(true);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo14Controller")) {
-            this.view.setManageStockManager(false);
-            this.view.setManageSellsManager(true);
-            this.view.setManageBillsManager(true);
-            this.view.setCheckUsersManager(true);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo13Controller")) {
-            this.view.setManageStockManager(true);
-            this.view.setManageSellsManager(true);
-            this.view.setManageBillsManager(false);
-            this.view.setCheckUsersManager(true);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo12Controller")) {
-            this.view.setManageStockManager(true);
-            this.view.setManageSellsManager(true);
-            this.view.setManageBillsManager(true);
-            this.view.setCheckUsersManager(false);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo11Controller")) {
-            this.view.setManageStockManager(true);
-            this.view.setManageSellsManager(false);
-            this.view.setManageBillsManager(true);
-            this.view.setCheckUsersManager(true);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo10Controller")) {
-            this.view.setManageStockManager(false);
-            this.view.setManageSellsManager(false);
-            this.view.setManageBillsManager(true);
-            this.view.setCheckUsersManager(true);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo9Controller")) {
-            this.view.setManageStockManager(false);
-            this.view.setManageSellsManager(true);
-            this.view.setManageBillsManager(false);
-            this.view.setCheckUsersManager(true);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo8Controller")) {
-            this.view.setManageStockManager(false);
-            this.view.setManageSellsManager(true);
-            this.view.setManageBillsManager(true);
-            this.view.setCheckUsersManager(false);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo7Controller")) {
-            this.view.setManageStockManager(true);
-            this.view.setManageSellsManager(false);
-            this.view.setManageBillsManager(false);
-            this.view.setCheckUsersManager(true);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo6Controller")) {
-            this.view.setManageStockManager(true);
-            this.view.setManageSellsManager(false);
-            this.view.setManageBillsManager(true);
-            this.view.setCheckUsersManager(false);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo5Controller")) {
-            this.view.setManageStockManager(true);
-            this.view.setManageSellsManager(true);
-            this.view.setManageBillsManager(false);
-            this.view.setCheckUsersManager(false);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo4Controller")) {
-            this.view.setManageStockManager(false);
-            this.view.setManageSellsManager(false);
-            this.view.setManageBillsManager(false);
-            this.view.setCheckUsersManager(true);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo3Controller")) {
-            this.view.setManageStockManager(false);
-            this.view.setManageSellsManager(false);
-            this.view.setManageBillsManager(true);
-            this.view.setCheckUsersManager(false);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo2Controller")) {
-            this.view.setManageStockManager(false);
-            this.view.setManageSellsManager(true);
-            this.view.setManageBillsManager(false);
-            this.view.setCheckUsersManager(false);
-        } else if (permissionsCombo.get(0).equals("PermissionCombo1Controller")) {
-            this.view.setManageStockManager(true);
-            this.view.setManageSellsManager(false);
-            this.view.setManageBillsManager(false);
-            this.view.setCheckUsersManager(false);
+        switch (permissionsCombo.get(0)) {
+            case "PermissionCombo15Controller" -> {
+                this.view.setManageStockManager(true);
+                this.view.setManageSellsManager(true);
+                this.view.setManageBillsManager(true);
+                this.view.setCheckUsersManager(true);
+            }
+            case "PermissionCombo14Controller" -> {
+                this.view.setManageStockManager(false);
+                this.view.setManageSellsManager(true);
+                this.view.setManageBillsManager(true);
+                this.view.setCheckUsersManager(true);
+            }
+            case "PermissionCombo13Controller" -> {
+                this.view.setManageStockManager(true);
+                this.view.setManageSellsManager(true);
+                this.view.setManageBillsManager(false);
+                this.view.setCheckUsersManager(true);
+            }
+            case "PermissionCombo12Controller" -> {
+                this.view.setManageStockManager(true);
+                this.view.setManageSellsManager(true);
+                this.view.setManageBillsManager(true);
+                this.view.setCheckUsersManager(false);
+            }
+            case "PermissionCombo11Controller" -> {
+                this.view.setManageStockManager(true);
+                this.view.setManageSellsManager(false);
+                this.view.setManageBillsManager(true);
+                this.view.setCheckUsersManager(true);
+            }
+            case "PermissionCombo10Controller" -> {
+                this.view.setManageStockManager(false);
+                this.view.setManageSellsManager(false);
+                this.view.setManageBillsManager(true);
+                this.view.setCheckUsersManager(true);
+            }
+            case "PermissionCombo9Controller" -> {
+                this.view.setManageStockManager(false);
+                this.view.setManageSellsManager(true);
+                this.view.setManageBillsManager(false);
+                this.view.setCheckUsersManager(true);
+            }
+            case "PermissionCombo8Controller" -> {
+                this.view.setManageStockManager(false);
+                this.view.setManageSellsManager(true);
+                this.view.setManageBillsManager(true);
+                this.view.setCheckUsersManager(false);
+            }
+            case "PermissionCombo7Controller" -> {
+                this.view.setManageStockManager(true);
+                this.view.setManageSellsManager(false);
+                this.view.setManageBillsManager(false);
+                this.view.setCheckUsersManager(true);
+            }
+            case "PermissionCombo6Controller" -> {
+                this.view.setManageStockManager(true);
+                this.view.setManageSellsManager(false);
+                this.view.setManageBillsManager(true);
+                this.view.setCheckUsersManager(false);
+            }
+            case "PermissionCombo5Controller" -> {
+                this.view.setManageStockManager(true);
+                this.view.setManageSellsManager(true);
+                this.view.setManageBillsManager(false);
+                this.view.setCheckUsersManager(false);
+            }
+            case "PermissionCombo4Controller" -> {
+                this.view.setManageStockManager(false);
+                this.view.setManageSellsManager(false);
+                this.view.setManageBillsManager(false);
+                this.view.setCheckUsersManager(true);
+            }
+            case "PermissionCombo3Controller" -> {
+                this.view.setManageStockManager(false);
+                this.view.setManageSellsManager(false);
+                this.view.setManageBillsManager(true);
+                this.view.setCheckUsersManager(false);
+            }
+            case "PermissionCombo2Controller" -> {
+                this.view.setManageStockManager(false);
+                this.view.setManageSellsManager(true);
+                this.view.setManageBillsManager(false);
+                this.view.setCheckUsersManager(false);
+            }
+            case "PermissionCombo1Controller" -> {
+                this.view.setManageStockManager(true);
+                this.view.setManageSellsManager(false);
+                this.view.setManageBillsManager(false);
+                this.view.setCheckUsersManager(false);
+            }
         }
 
-        if (permissionsCombo.get(1).equals("PermissionCombo15Controller")) {
-            this.view.setManageStockLibrarian(true);
-            this.view.setManageSellsLibrarian(true);
-            this.view.setManageBillsLibrarian(true);
-            this.view.setCheckUsersLibrarian(true);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo14Controller")) {
-            this.view.setManageStockLibrarian(false);
-            this.view.setManageSellsLibrarian(true);
-            this.view.setManageBillsLibrarian(true);
-            this.view.setCheckUsersLibrarian(true);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo13Controller")) {
-            this.view.setManageStockLibrarian(true);
-            this.view.setManageSellsLibrarian(true);
-            this.view.setManageBillsLibrarian(false);
-            this.view.setCheckUsersLibrarian(true);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo12Controller")) {
-            this.view.setManageStockLibrarian(true);
-            this.view.setManageSellsLibrarian(true);
-            this.view.setManageBillsLibrarian(true);
-            this.view.setCheckUsersLibrarian(false);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo11Controller")) {
-            this.view.setManageStockLibrarian(true);
-            this.view.setManageSellsLibrarian(false);
-            this.view.setManageBillsLibrarian(true);
-            this.view.setCheckUsersLibrarian(true);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo10Controller")) {
-            this.view.setManageStockLibrarian(false);
-            this.view.setManageSellsLibrarian(false);
-            this.view.setManageBillsLibrarian(true);
-            this.view.setCheckUsersLibrarian(true);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo9Controller")) {
-            this.view.setManageStockLibrarian(false);
-            this.view.setManageSellsLibrarian(true);
-            this.view.setManageBillsLibrarian(false);
-            this.view.setCheckUsersLibrarian(true);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo8Controller")) {
-            this.view.setManageStockLibrarian(false);
-            this.view.setManageSellsLibrarian(true);
-            this.view.setManageBillsLibrarian(true);
-            this.view.setCheckUsersLibrarian(false);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo7Controller")) {
-            this.view.setManageStockLibrarian(true);
-            this.view.setManageSellsLibrarian(false);
-            this.view.setManageBillsLibrarian(false);
-            this.view.setCheckUsersLibrarian(true);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo6Controller")) {
-            this.view.setManageStockLibrarian(true);
-            this.view.setManageSellsLibrarian(false);
-            this.view.setManageBillsLibrarian(true);
-            this.view.setCheckUsersLibrarian(false);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo5Controller")) {
-            this.view.setManageStockLibrarian(true);
-            this.view.setManageSellsLibrarian(true);
-            this.view.setManageBillsLibrarian(false);
-            this.view.setCheckUsersLibrarian(false);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo4Controller")) {
-            this.view.setManageStockLibrarian(false);
-            this.view.setManageSellsLibrarian(false);
-            this.view.setManageBillsLibrarian(false);
-            this.view.setCheckUsersLibrarian(true);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo3Controller")) {
-            this.view.setManageStockLibrarian(false);
-            this.view.setManageSellsLibrarian(false);
-            this.view.setManageBillsLibrarian(true);
-            this.view.setCheckUsersLibrarian(false);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo2Controller")) {
-            this.view.setManageStockLibrarian(false);
-            this.view.setManageSellsLibrarian(true);
-            this.view.setManageBillsLibrarian(false);
-            this.view.setCheckUsersLibrarian(false);
-        } else if (permissionsCombo.get(1).equals("PermissionCombo1Controller")) {
-            this.view.setManageStockLibrarian(true);
-            this.view.setManageSellsLibrarian(false);
-            this.view.setManageBillsLibrarian(false);
-            this.view.setCheckUsersLibrarian(false);
+        switch (permissionsCombo.get(1)) {
+            case "PermissionCombo15Controller" -> {
+                this.view.setManageStockLibrarian(true);
+                this.view.setManageSellsLibrarian(true);
+                this.view.setManageBillsLibrarian(true);
+                this.view.setCheckUsersLibrarian(true);
+            }
+            case "PermissionCombo14Controller" -> {
+                this.view.setManageStockLibrarian(false);
+                this.view.setManageSellsLibrarian(true);
+                this.view.setManageBillsLibrarian(true);
+                this.view.setCheckUsersLibrarian(true);
+            }
+            case "PermissionCombo13Controller" -> {
+                this.view.setManageStockLibrarian(true);
+                this.view.setManageSellsLibrarian(true);
+                this.view.setManageBillsLibrarian(false);
+                this.view.setCheckUsersLibrarian(true);
+            }
+            case "PermissionCombo12Controller" -> {
+                this.view.setManageStockLibrarian(true);
+                this.view.setManageSellsLibrarian(true);
+                this.view.setManageBillsLibrarian(true);
+                this.view.setCheckUsersLibrarian(false);
+            }
+            case "PermissionCombo11Controller" -> {
+                this.view.setManageStockLibrarian(true);
+                this.view.setManageSellsLibrarian(false);
+                this.view.setManageBillsLibrarian(true);
+                this.view.setCheckUsersLibrarian(true);
+            }
+            case "PermissionCombo10Controller" -> {
+                this.view.setManageStockLibrarian(false);
+                this.view.setManageSellsLibrarian(false);
+                this.view.setManageBillsLibrarian(true);
+                this.view.setCheckUsersLibrarian(true);
+            }
+            case "PermissionCombo9Controller" -> {
+                this.view.setManageStockLibrarian(false);
+                this.view.setManageSellsLibrarian(true);
+                this.view.setManageBillsLibrarian(false);
+                this.view.setCheckUsersLibrarian(true);
+            }
+            case "PermissionCombo8Controller" -> {
+                this.view.setManageStockLibrarian(false);
+                this.view.setManageSellsLibrarian(true);
+                this.view.setManageBillsLibrarian(true);
+                this.view.setCheckUsersLibrarian(false);
+            }
+            case "PermissionCombo7Controller" -> {
+                this.view.setManageStockLibrarian(true);
+                this.view.setManageSellsLibrarian(false);
+                this.view.setManageBillsLibrarian(false);
+                this.view.setCheckUsersLibrarian(true);
+            }
+            case "PermissionCombo6Controller" -> {
+                this.view.setManageStockLibrarian(true);
+                this.view.setManageSellsLibrarian(false);
+                this.view.setManageBillsLibrarian(true);
+                this.view.setCheckUsersLibrarian(false);
+            }
+            case "PermissionCombo5Controller" -> {
+                this.view.setManageStockLibrarian(true);
+                this.view.setManageSellsLibrarian(true);
+                this.view.setManageBillsLibrarian(false);
+                this.view.setCheckUsersLibrarian(false);
+            }
+            case "PermissionCombo4Controller" -> {
+                this.view.setManageStockLibrarian(false);
+                this.view.setManageSellsLibrarian(false);
+                this.view.setManageBillsLibrarian(false);
+                this.view.setCheckUsersLibrarian(true);
+            }
+            case "PermissionCombo3Controller" -> {
+                this.view.setManageStockLibrarian(false);
+                this.view.setManageSellsLibrarian(false);
+                this.view.setManageBillsLibrarian(true);
+                this.view.setCheckUsersLibrarian(false);
+            }
+            case "PermissionCombo2Controller" -> {
+                this.view.setManageStockLibrarian(false);
+                this.view.setManageSellsLibrarian(true);
+                this.view.setManageBillsLibrarian(false);
+                this.view.setCheckUsersLibrarian(false);
+            }
+            case "PermissionCombo1Controller" -> {
+                this.view.setManageStockLibrarian(true);
+                this.view.setManageSellsLibrarian(false);
+                this.view.setManageBillsLibrarian(false);
+                this.view.setCheckUsersLibrarian(false);
+            }
         }
     }
 }

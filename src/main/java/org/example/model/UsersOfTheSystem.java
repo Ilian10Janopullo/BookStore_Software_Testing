@@ -74,6 +74,7 @@ public abstract class UsersOfTheSystem implements Serializable, Human {
         return birthdate;
     }
 
+    @SuppressWarnings("unused")
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
     }

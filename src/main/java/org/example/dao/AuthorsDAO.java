@@ -6,7 +6,7 @@ import org.example.model.Author;
 import java.io.File;
 import java.util.List;
 
-public class AuthorsDAO implements dao {
+public class AuthorsDAO implements dao<Author> {
     public static final String FILE_PATH = "src/main/database/authors.dat";
     private static final File DATA_FILE = new File(FILE_PATH);
     private final ObservableList<Author> authors = FXCollections.observableArrayList();

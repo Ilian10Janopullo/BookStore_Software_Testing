@@ -79,6 +79,7 @@ public class TableManagingUsersView extends BorderPane {
     private final Button btnUpdate = new Button("");
     private final Button returnButton = new Button("");
 
+    @SuppressWarnings("unchecked")
     public TableManagingUsersView() {
         tableView.setEditable(true);
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);

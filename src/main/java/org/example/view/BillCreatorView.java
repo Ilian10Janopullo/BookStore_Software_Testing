@@ -18,6 +18,8 @@ import org.example.model.Genre;
 
 import java.io.FileInputStream;
 
+@SuppressWarnings("unused")
+
 public class BillCreatorView extends BorderPane {
     private final TableView<Book> tableViewOgBooksInStock = new TableView<>();
     private final TableColumn<Book, String> titleColumnOfBooksInStock;
@@ -47,7 +49,7 @@ public class BillCreatorView extends BorderPane {
 
     private final Label totalAmountFieldLb = new Label();
 
-
+    @SuppressWarnings("unchecked")
     public BillCreatorView() {
         tableViewOgBooksInStock.setEditable(true);
         tableViewOgBooksInStock.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);

@@ -64,7 +64,7 @@ public class TableViewManagingBooks extends BorderPane {
     private final Button btnUpdate = new Button("");
     private final Button returnButton = new Button("");
 
-
+    @SuppressWarnings("unchecked")
     public TableViewManagingBooks() {
         authorsDAO = new AuthorsDAO();
         tableView.setEditable(true);

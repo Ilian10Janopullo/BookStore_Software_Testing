@@ -20,7 +20,7 @@ public class PermissionCombo13 extends BorderPane {
     private final Button manageAuthors = new Button("");
     private final Button sellBooks = new Button("");
     private final Button checkUsers = new Button("");
-
+    @SuppressWarnings("unused")
     public PermissionCombo13(Stage stage) {
         sellBooks.setPrefWidth(200);
         sellBooks.setPrefHeight(200);

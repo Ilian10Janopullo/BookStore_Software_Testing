@@ -19,7 +19,7 @@ public class PermissionCombo3 extends BorderPane {
 
     private final Button manageBills = new Button("");
 
-
+    @SuppressWarnings("unused")
     public PermissionCombo3(Stage stage) {
 
         logout.setPrefWidth(100);

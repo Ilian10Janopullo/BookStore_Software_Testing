@@ -1,0 +1,12 @@
+Bill ID : 1b5457eb-f38a-41b3-902c-275929968c76
+User ID : 34d98e27-13c3-4a2d-9963-2252328febaf
+Date/Time : Sun Dec 01 20:35:40 CET 2024
+Book : Keshtjella	 Price : 10.0	 Quantity : 2
+Total : 20.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bill ID : ae2c1ab7-b7c7-4122-bfdc-ba212e8a0a26
+User ID : 34d98e27-13c3-4a2d-9963-2252328febaf
+Date/Time : Sun Dec 01 20:36:26 CET 2024
+Book : Keshtjella	 Price : 10.0	 Quantity : 2
+Total : 20.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

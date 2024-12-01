@@ -475,6 +475,7 @@ public class ManageUsersController {
         view.getTableView().refresh();
     }
 
+    @SuppressWarnings("MagicConstant")
     public void Submit(ActionEvent event) {
 
         UsersOfTheSystem newUser;

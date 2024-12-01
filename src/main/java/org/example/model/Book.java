@@ -6,7 +6,7 @@ import javafx.scene.control.Alert;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
-
+@SuppressWarnings("unused")
 public class Book implements Serializable {
     @Serial
     private static final long serialVersionUID = 5296705482940410483L;

@@ -38,6 +38,7 @@ public class LoginController {
 
         boolean authenticationStatus = false;
 
+        label:
         for (UsersOfTheSystem user : users) {
             if (username.compareTo(user.getUsername()) == 0 && password.compareTo(user.getPassword()) == 0) {
                 authenticationStatus = true;
@@ -46,142 +47,160 @@ public class LoginController {
                     stage.getScene().setRoot(controller.getView());
                     break;
                 } else if (user.getRole() == Role.MANAGER && user.getStatus() == Status.ACTIVE) {
-                    if(permissionsCombo.get(0).equals("PermissionCombo1Controller")){
-                        PermissionCombo1Controller controller = new PermissionCombo1Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo2Controller")){
-                        PermissionCombo2Controller controller = new PermissionCombo2Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo3Controller")){
-                        PermissionCombo3Controller controller = new PermissionCombo3Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo4Controller")){
-                        PermissionCombo4Controller controller = new PermissionCombo4Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo5Controller")){
-                        PermissionCombo5Controller controller = new PermissionCombo5Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo6Controller")){
-                        PermissionCombo6Controller controller = new PermissionCombo6Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo7Controller")){
-                        PermissionCombo7Controller controller = new PermissionCombo7Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo8Controller")){
-                        PermissionCombo8Controller controller = new PermissionCombo8Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo9Controller")){
-                        PermissionCombo9Controller controller = new PermissionCombo9Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo10Controller")){
-                        PermissionCombo10Controller controller = new PermissionCombo10Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo11Controller")){
-                        PermissionCombo11Controller controller = new PermissionCombo11Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo12Controller")){
-                        PermissionCombo12Controller controller = new PermissionCombo12Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo13Controller")){
-                        PermissionCombo13Controller controller = new PermissionCombo13Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo14Controller")){
-                        PermissionCombo14Controller controller = new PermissionCombo14Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    }
-                    else if(permissionsCombo.get(0).equals("PermissionCombo15Controller")){
-                        PermissionCombo15Controller controller = new PermissionCombo15Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
+                    switch (permissionsCombo.get(0)) {
+                        case "PermissionCombo1Controller" -> {
+                            PermissionCombo1Controller controller = new PermissionCombo1Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo2Controller" -> {
+                            PermissionCombo2Controller controller = new PermissionCombo2Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo3Controller" -> {
+                            PermissionCombo3Controller controller = new PermissionCombo3Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo4Controller" -> {
+                            PermissionCombo4Controller controller = new PermissionCombo4Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo5Controller" -> {
+                            PermissionCombo5Controller controller = new PermissionCombo5Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo6Controller" -> {
+                            PermissionCombo6Controller controller = new PermissionCombo6Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo7Controller" -> {
+                            PermissionCombo7Controller controller = new PermissionCombo7Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo8Controller" -> {
+                            PermissionCombo8Controller controller = new PermissionCombo8Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo9Controller" -> {
+                            PermissionCombo9Controller controller = new PermissionCombo9Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo10Controller" -> {
+                            PermissionCombo10Controller controller = new PermissionCombo10Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo11Controller" -> {
+                            PermissionCombo11Controller controller = new PermissionCombo11Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo12Controller" -> {
+                            PermissionCombo12Controller controller = new PermissionCombo12Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo13Controller" -> {
+                            PermissionCombo13Controller controller = new PermissionCombo13Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo14Controller" -> {
+                            PermissionCombo14Controller controller = new PermissionCombo14Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo15Controller" -> {
+                            PermissionCombo15Controller controller = new PermissionCombo15Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
                     }
                 } else if (user.getRole() == Role.LIBRARIAN && user.getStatus() == Status.ACTIVE) {
-                    if (permissionsCombo.get(1).equals("PermissionCombo1Controller")) {
-                        PermissionCombo1Controller controller = new PermissionCombo1Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo2Controller")) {
-                        PermissionCombo2Controller controller = new PermissionCombo2Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo3Controller")) {
-                        PermissionCombo3Controller controller = new PermissionCombo3Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo4Controller")) {
-                        PermissionCombo4Controller controller = new PermissionCombo4Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo5Controller")) {
-                        PermissionCombo5Controller controller = new PermissionCombo5Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo6Controller")) {
-                        PermissionCombo6Controller controller = new PermissionCombo6Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo7Controller")) {
-                        PermissionCombo7Controller controller = new PermissionCombo7Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo8Controller")) {
-                        PermissionCombo8Controller controller = new PermissionCombo8Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo9Controller")) {
-                        PermissionCombo9Controller controller = new PermissionCombo9Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo10Controller")) {
-                        PermissionCombo10Controller controller = new PermissionCombo10Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo11Controller")) {
-                        PermissionCombo11Controller controller = new PermissionCombo11Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo12Controller")) {
-                        PermissionCombo12Controller controller = new PermissionCombo12Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo13Controller")) {
-                        PermissionCombo13Controller controller = new PermissionCombo13Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo14Controller")) {
-                        PermissionCombo14Controller controller = new PermissionCombo14Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
-                    } else if (permissionsCombo.get(1).equals("PermissionCombo15Controller")) {
-                        PermissionCombo15Controller controller = new PermissionCombo15Controller(stage, user);
-                        stage.getScene().setRoot(controller.getView());
-                        break;
+                    switch (permissionsCombo.get(1)) {
+                        case "PermissionCombo1Controller" -> {
+                            PermissionCombo1Controller controller = new PermissionCombo1Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo2Controller" -> {
+                            PermissionCombo2Controller controller = new PermissionCombo2Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo3Controller" -> {
+                            PermissionCombo3Controller controller = new PermissionCombo3Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo4Controller" -> {
+                            PermissionCombo4Controller controller = new PermissionCombo4Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo5Controller" -> {
+                            PermissionCombo5Controller controller = new PermissionCombo5Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo6Controller" -> {
+                            PermissionCombo6Controller controller = new PermissionCombo6Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo7Controller" -> {
+                            PermissionCombo7Controller controller = new PermissionCombo7Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo8Controller" -> {
+                            PermissionCombo8Controller controller = new PermissionCombo8Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo9Controller" -> {
+                            PermissionCombo9Controller controller = new PermissionCombo9Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo10Controller" -> {
+                            PermissionCombo10Controller controller = new PermissionCombo10Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo11Controller" -> {
+                            PermissionCombo11Controller controller = new PermissionCombo11Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo12Controller" -> {
+                            PermissionCombo12Controller controller = new PermissionCombo12Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo13Controller" -> {
+                            PermissionCombo13Controller controller = new PermissionCombo13Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo14Controller" -> {
+                            PermissionCombo14Controller controller = new PermissionCombo14Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
+                        case "PermissionCombo15Controller" -> {
+                            PermissionCombo15Controller controller = new PermissionCombo15Controller(stage, user);
+                            stage.getScene().setRoot(controller.getView());
+                            break label;
+                        }
                     }
                 } else {
                     Alert alert;

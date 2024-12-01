@@ -41,6 +41,7 @@ public class TableViewManagingAuthors extends BorderPane {
     private final Button btnUpdate = new Button("");
     private final Button returnButton = new Button("");
 
+    @SuppressWarnings("unchecked")
     public TableViewManagingAuthors() {
         tableView.setEditable(true);
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);

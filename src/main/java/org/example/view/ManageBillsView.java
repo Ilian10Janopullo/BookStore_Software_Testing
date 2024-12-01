@@ -15,6 +15,7 @@ import org.example.model.BooksOrdered;
 import java.io.FileInputStream;
 import java.util.Date;
 import java.util.GregorianCalendar;
+@SuppressWarnings("unused")
 
 public class ManageBillsView extends BorderPane {
 
@@ -43,6 +44,7 @@ public class ManageBillsView extends BorderPane {
     private final DatePicker toDate = new DatePicker();
     private final Button searchButton2 = new Button("");
 
+    @SuppressWarnings("unchecked")
     public ManageBillsView() {
 
         tableViewOfBills.setEditable(true);
@@ -262,6 +264,7 @@ public class ManageBillsView extends BorderPane {
         return fromDateLb;
     }
 
+    @SuppressWarnings("MagicConstant")
     public Date getFromDate() {
         int year = fromDate.getValue().getYear();
         int month = fromDate.getValue().getMonthValue() - 1;
@@ -270,7 +273,8 @@ public class ManageBillsView extends BorderPane {
         GregorianCalendar gregorianCalendar = new GregorianCalendar(year, month, day);
         return gregorianCalendar.getTime();
     }
-
+    
+    @SuppressWarnings("MagicConstant")
     public Date getToDate() {
 
         int year = toDate.getValue().getYear();

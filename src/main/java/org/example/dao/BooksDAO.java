@@ -7,7 +7,7 @@ import org.example.model.Book;
 import java.io.File;
 import java.util.List;
 
-public class BooksDAO implements dao {
+public class BooksDAO implements dao<Book> {
     public static final String FILE_PATH = "src/main/database/books.dat";
     private static final File DATA_FILE = new File(FILE_PATH);
     private final ObservableList<Book> books = FXCollections.observableArrayList();

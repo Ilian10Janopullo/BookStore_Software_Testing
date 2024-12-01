@@ -19,7 +19,7 @@ public class PermissionCombo6 extends BorderPane {
     private final Button manageBooks = new Button("");
     private final Button manageAuthors = new Button("");
     private final Button manageBills = new Button("");
-
+    @SuppressWarnings("unused")
     public PermissionCombo6(Stage stage) {
 
         logout.setPrefWidth(100);

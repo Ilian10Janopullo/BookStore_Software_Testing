@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
+@SuppressWarnings("unused")
 public class BooksOrdered implements Serializable {
     @Serial
     private static final long serialVersionUID = 49479879851447L;

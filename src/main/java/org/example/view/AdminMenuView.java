@@ -24,6 +24,7 @@ public class AdminMenuView extends BorderPane {
     private final Button manageBills = new Button("");
     private final Button controlPermissions = new Button("");
 
+    @SuppressWarnings("unused")
     public AdminMenuView(Stage stage) {
         sellBooks.setPrefWidth(200);
         sellBooks.setPrefHeight(200);

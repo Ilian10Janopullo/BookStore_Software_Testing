@@ -18,7 +18,7 @@ public class PermissionCombo10 extends BorderPane {
     private final Button logout = new Button("");
     private final Button manageBills = new Button("");
     private final Button checkUsers = new Button("");
-
+    @SuppressWarnings("unused")
     public PermissionCombo10(Stage stage) {
 
         logout.setPrefWidth(100);

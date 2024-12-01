@@ -18,6 +18,7 @@ public class PermissionCombo4 extends BorderPane {
     private final Button logout = new Button("");
     private final Button checkUsers = new Button("");
 
+    @SuppressWarnings("unused")
     public PermissionCombo4(Stage stage) {
 
         logout.setPrefWidth(100);

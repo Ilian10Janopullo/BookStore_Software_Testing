@@ -7,15 +7,19 @@ import java.util.List;
 
 public interface dao<T> {
 
+    @SuppressWarnings("unchecked")
     default void loadFromFileImplementation(ObservableList<T> list, File DATA_FILE) {
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(DATA_FILE))) {
             while (true) {
-                T t = (T) inputStream.readObject();
-                list.add(t);
+                try {
+                    T t = (T) inputStream.readObject();
+                    list.add(t);
+                } catch (EOFException e) {
+                    break;
+                }
             }
-        } catch (EOFException ignored) {
         } catch (IOException | ClassNotFoundException ex) {
-            System.out.println(ex.getMessage());
+            System.err.println("Error: " + ex.getMessage());
         }
     }
     default boolean addToFileImplementation(T t, ObservableList<T> list, File DATA_FILE) {

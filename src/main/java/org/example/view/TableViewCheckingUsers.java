@@ -32,6 +32,7 @@ public class TableViewCheckingUsers extends BorderPane {
     private final Button resetBtn = new Button("");
     private final Button returnButton = new Button("");
 
+    @SuppressWarnings("unchecked")
     public TableViewCheckingUsers() {
 
         tableView.setEditable(false);

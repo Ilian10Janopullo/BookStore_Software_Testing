@@ -5,6 +5,7 @@ import javafx.scene.control.Alert;
 import java.io.Serial;
 import java.io.Serializable;
 
+@SuppressWarnings("unused")
 public class Author implements Serializable, Human {
     @Serial
     private static final long serialVersionUID = -6015536657969848359L;

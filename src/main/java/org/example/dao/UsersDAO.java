@@ -7,7 +7,7 @@ import org.example.model.UsersOfTheSystem;
 import java.io.File;
 import java.util.List;
 
-public class UsersDAO implements dao {
+public class UsersDAO implements dao<UsersOfTheSystem> {
     public static final String FILE_PATH = "src/main/database/users.dat";
     private static final File DATA_FILE = new File(FILE_PATH);
     private static final ObservableList<UsersOfTheSystem> users = FXCollections.observableArrayList();
