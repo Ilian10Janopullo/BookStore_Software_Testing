@@ -41,7 +41,7 @@ public class PermissionCombo9Controller {
         LoginController controller = new LoginController(stage);
         stage.getScene().setRoot(controller.getView());
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void Sell() {
 
         boolean checkForBooksInTheSystem = false;
@@ -63,7 +63,7 @@ public class PermissionCombo9Controller {
             alert.show();
         }
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void CheckUsers() {
         if (!users.isEmpty()) {
             CheckUsersController controller = new CheckUsersController(stage, user);

@@ -37,7 +37,7 @@ public class PermissionCombo4Controller {
     }
 
 
-
+    @SuppressWarnings("DuplicatedCode")
     public void CheckUsers() {
         if (!users.isEmpty()) {
             CheckUsersController controller = new CheckUsersController(stage, user);

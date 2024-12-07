@@ -37,7 +37,7 @@ public class PermissionCombo3Controller {
         stage.getScene().setRoot(controller.getView());
     }
 
-
+    @SuppressWarnings("DuplicatedCode")
     public void ManageBills() {
         if (!bills.isEmpty()) {
             ManageBillsController controller = new ManageBillsController(stage, user);

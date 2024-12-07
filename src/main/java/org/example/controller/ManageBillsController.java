@@ -69,7 +69,7 @@ public class ManageBillsController {
 
         setEditListeners();
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public static boolean checkQuantity(int quantity, Book book) {
         try {
             if (quantity <= 0 || quantity > book.getQuantity()) {
@@ -108,7 +108,7 @@ public class ManageBillsController {
             ex.fillInStackTrace();
         }
     }
-
+    @SuppressWarnings("DuplicatedCode")
     private void setEditListeners() {
 
         this.view.getQuantityToOrderColumn().setOnEditCommit(e -> {
@@ -289,7 +289,7 @@ public class ManageBillsController {
         });
 
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void onOrderRemove(ActionEvent event) {
 
         try {
@@ -356,7 +356,7 @@ public class ManageBillsController {
             }
         }
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void Back(ActionEvent event) {
         if (user.getRole() == Role.ADMIN) {
             AdminMenuController controller = new AdminMenuController(stage, user, true);

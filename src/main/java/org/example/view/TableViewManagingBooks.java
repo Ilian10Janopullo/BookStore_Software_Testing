@@ -329,7 +329,7 @@ public class TableViewManagingBooks extends BorderPane {
     public Button getSubmitBtn() {
         return submitBtn;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     private GridPane setUpView() {
         GridPane addBookPane = new GridPane();
         addBookPane.setAlignment(Pos.CENTER);

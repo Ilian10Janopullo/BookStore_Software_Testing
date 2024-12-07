@@ -218,7 +218,7 @@ public class ManagingBooksController {
     public TableViewManagingBooks getView() {
         return view;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     private void setEditListeners() {
         this.view.getTitleColumn().setOnEditCommit(e -> {
             if (checkTitle(e.getNewValue())) {
@@ -469,7 +469,7 @@ public class ManagingBooksController {
             ex.fillInStackTrace();
         }
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void Back(ActionEvent event) {
         if (user.getRole() == Role.ADMIN) {
             AdminMenuController controller = new AdminMenuController(stage, user, true);

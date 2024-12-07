@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import org.example.model.Book;
 import org.example.model.UsersOfTheSystem;
 import org.example.view.PermissionCombo14;
-
+@SuppressWarnings("DuplicatedCode")
 public class PermissionCombo14Controller {
     private static ObservableList<UsersOfTheSystem> users;
     private static ObservableList<Book> books;

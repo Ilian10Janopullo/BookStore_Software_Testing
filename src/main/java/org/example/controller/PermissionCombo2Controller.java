@@ -37,7 +37,7 @@ public class PermissionCombo2Controller {
         LoginController controller = new LoginController(stage);
         stage.getScene().setRoot(controller.getView());
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void Sell() {
 
         boolean checkForBooksInTheSystem = false;

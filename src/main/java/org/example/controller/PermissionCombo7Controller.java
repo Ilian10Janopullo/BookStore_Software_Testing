@@ -84,7 +84,7 @@ public class PermissionCombo7Controller {
         ManagingAuthorsController controller = new ManagingAuthorsController(stage, user);
         stage.getScene().setRoot(controller.getView());
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void ManageBooks() {
         if (!authors.isEmpty()) {
             ManagingBooksController controller = new ManagingBooksController(stage, user);
@@ -103,7 +103,7 @@ public class PermissionCombo7Controller {
         stage.getScene().setRoot(controller.getView());
     }
 
-
+    @SuppressWarnings("DuplicatedCode")
     public void CheckUsers() {
         if (!users.isEmpty()) {
             CheckUsersController controller = new CheckUsersController(stage, user);

@@ -28,10 +28,6 @@ public class BillsDAO implements dao<Bill> {
         return deleteImplementation(billToDelete, bills, DATA_FILE);
     }
 
-//    public boolean deleteAll(List<Bill> billsToDelete) {
-//        return deleteAllImplementation(bills, billsToDelete, DATA_FILE);
-//    }
-
     public boolean updateAll() {
        return updateAllImplementation(bills, DATA_FILE);
     }

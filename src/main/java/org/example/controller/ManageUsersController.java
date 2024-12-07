@@ -35,7 +35,7 @@ public class ManageUsersController {
         this.view.getBtnDelete().setOnAction(this::onUserDelete);
         setEditListeners();
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public boolean checkFirstName(String name) {
         if (!name.matches("[a-zA-Z]{1,25}")) {
             Alert alertForFirstName;
@@ -106,7 +106,7 @@ public class ManageUsersController {
         }
         return true;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public boolean checkMiddleName(String middleName) {
         if (middleName.matches("[a-zA-Z]{1,25}") || middleName.isEmpty()) {
             return true;
@@ -118,7 +118,7 @@ public class ManageUsersController {
         middleNameAlert.show();
         return false;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public boolean checkLastName(String lastName) {
         if (!lastName.matches("[a-zA-Z]{1,25}")) {
             Alert alertForLastName;
@@ -130,7 +130,7 @@ public class ManageUsersController {
         }
         return true;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public boolean checkGender(int index) {
         if (index == -1) {
             Alert alertForGender;
@@ -236,7 +236,7 @@ public class ManageUsersController {
     public TableManagingUsersView getView() {
         return view;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     private void setEditListeners() {
         this.view.getFirstNameColumn().setOnEditCommit(e -> {
             if (checkFirstName(e.getNewValue())) {
@@ -475,7 +475,7 @@ public class ManageUsersController {
         view.getTableView().refresh();
     }
 
-    @SuppressWarnings("MagicConstant")
+    @SuppressWarnings({"MagicConstant", "DuplicatedCode"})
     public void Submit(ActionEvent event) {
 
         UsersOfTheSystem newUser;

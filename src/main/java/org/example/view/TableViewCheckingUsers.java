@@ -14,7 +14,7 @@ import org.example.model.UsersOfTheSystem;
 
 import java.io.FileInputStream;
 
-
+@SuppressWarnings("unused")
 public class TableViewCheckingUsers extends BorderPane {
     private final TableView<UsersOfTheSystem> tableView = new TableView<>();
     private final TableColumn<UsersOfTheSystem, String> fullNameColumn;

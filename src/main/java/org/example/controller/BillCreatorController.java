@@ -59,7 +59,7 @@ public class BillCreatorController {
         setEditListeners();
     }
 
-
+    @SuppressWarnings("DuplicatedCode")
     public static boolean checkQuantity(int quantity, Book book) {
         try {
             if (quantity <= 0 || quantity > book.getQuantity()) {
@@ -114,6 +114,7 @@ public class BillCreatorController {
         }
     }
 
+    @SuppressWarnings("DuplicatedCode")
     private void setEditListeners() {
 
         this.view.getQuantityToOrderColumn().setOnEditCommit(e -> {
@@ -251,7 +252,7 @@ public class BillCreatorController {
 
     }
 
-
+    @SuppressWarnings("DuplicatedCode")
     public void Back(ActionEvent event) {
         if (user.getRole() == Role.ADMIN) {
             AdminMenuController controller = new AdminMenuController(stage, user, true);

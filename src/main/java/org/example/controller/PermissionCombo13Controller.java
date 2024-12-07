@@ -11,7 +11,7 @@ import org.example.model.Author;
 import org.example.model.Book;
 import org.example.model.UsersOfTheSystem;
 import org.example.view.PermissionCombo13;
-
+@SuppressWarnings("DuplicatedCode")
 public class PermissionCombo13Controller {
     private static ObservableList<Author> authors;
     private static ObservableList<UsersOfTheSystem> users;

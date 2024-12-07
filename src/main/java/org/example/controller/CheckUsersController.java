@@ -59,7 +59,7 @@ public class CheckUsersController {
     public TableViewCheckingUsers getView() {
         return view;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     private void setEditListeners() {
 
         this.view.getSearchBarTf().textProperty().addListener((observable, oldValue, newValue) ->
@@ -86,7 +86,7 @@ public class CheckUsersController {
 
         this.view.getResetBtn().setOnAction(e -> this.view.setSearchBarTf());
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void Back(ActionEvent event) {
         if (user.getRole() == Role.ADMIN) {
             AdminMenuController controller = new AdminMenuController(stage, user, true);

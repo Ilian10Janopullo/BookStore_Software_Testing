@@ -41,7 +41,7 @@ public class PermissionCombo10Controller {
         stage.getScene().setRoot(controller.getView());
     }
 
-
+    @SuppressWarnings("DuplicatedCode")
     public void ManageBills() {
         if (!bills.isEmpty()) {
             ManageBillsController controller = new ManageBillsController(stage, user);
@@ -54,7 +54,7 @@ public class PermissionCombo10Controller {
             alert.show();
         }
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void CheckUsers() {
         if (!users.isEmpty()) {
             CheckUsersController controller = new CheckUsersController(stage, user);

@@ -249,7 +249,7 @@ public class TableViewManagingAuthors extends BorderPane {
     public Button getSubmitBtn() {
         return submitBtn;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     private GridPane setUpViewForAuthorAdding() {
         GridPane addAuthorPane = new GridPane();
         addAuthorPane.setAlignment(Pos.CENTER);

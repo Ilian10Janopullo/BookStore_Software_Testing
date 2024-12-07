@@ -40,7 +40,7 @@ public class ManagingAuthorsController {
         this.view.getBtnDelete().setOnAction(this::onAuthorDelete);
         setEditListeners();
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public boolean checkFirstName(String name) {
         if (!name.matches("[a-zA-Z]{1,25}")) {
             Alert alertForFirstName;
@@ -52,7 +52,7 @@ public class ManagingAuthorsController {
         }
         return true;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public boolean checkMiddleName(String middleName) {
         if (middleName.matches("[a-zA-Z]{1,25}") || middleName.isEmpty()) {
             return true;
@@ -64,7 +64,7 @@ public class ManagingAuthorsController {
         middleNameAlert.show();
         return false;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public boolean checkLastName(String lastName) {
         if (!lastName.matches("[a-zA-Z]{1,25}")) {
             Alert alertForLastName;
@@ -76,7 +76,7 @@ public class ManagingAuthorsController {
         }
         return true;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public boolean checkGender(int index) {
         if (index == -1) {
             Alert alertForGender;
@@ -88,11 +88,10 @@ public class ManagingAuthorsController {
         }
         return true;
     }
-
     public TableViewManagingAuthors getView() {
         return view;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     private void setEditListeners() {
         this.view.getFirstNameColumn().setOnEditCommit(e -> {
             if (checkFirstName(e.getNewValue())) {
@@ -196,6 +195,8 @@ public class ManagingAuthorsController {
 
     }
 
+    @SuppressWarnings("DuplicatedCode")
+
     public void Submit(ActionEvent event) {
 
         Author newAuthor;
@@ -275,7 +276,7 @@ public class ManagingAuthorsController {
             }
         }
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void Back(ActionEvent event) {
         if (user.getRole() == Role.ADMIN) {
             AdminMenuController controller = new AdminMenuController(stage, user, true);

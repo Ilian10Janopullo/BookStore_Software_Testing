@@ -77,7 +77,7 @@ public class PermissionCombo5Controller {
         ManagingAuthorsController controller = new ManagingAuthorsController(stage, user);
         stage.getScene().setRoot(controller.getView());
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void ManageBooks() {
         if (!authors.isEmpty()) {
             ManagingBooksController controller = new ManagingBooksController(stage, user);
@@ -95,7 +95,7 @@ public class PermissionCombo5Controller {
         LoginController controller = new LoginController(stage);
         stage.getScene().setRoot(controller.getView());
     }
-
+    @SuppressWarnings("DuplicatedCode")
     public void Sell() {
 
         boolean checkForBooksInTheSystem = false;

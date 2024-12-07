@@ -13,7 +13,7 @@ import org.example.model.Bill;
 import org.example.model.Book;
 import org.example.model.UsersOfTheSystem;
 import org.example.view.PermissionCombo15;
-
+@SuppressWarnings("DuplicatedCode")
 public class PermissionCombo15Controller {
     private static ObservableList<Author> authors;
     private static ObservableList<Bill> bills;

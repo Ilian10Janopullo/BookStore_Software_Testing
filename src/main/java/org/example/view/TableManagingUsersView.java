@@ -458,7 +458,7 @@ public class TableManagingUsersView extends BorderPane {
     public Button getReturnButton() {
         return returnButton;
     }
-
+    @SuppressWarnings("DuplicatedCode")
     private GridPane setUpViewForUserAdding() {
         GridPane addUserPane = new GridPane();
         addUserPane.setAlignment(Pos.CENTER);
