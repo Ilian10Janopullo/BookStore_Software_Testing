@@ -79,13 +79,13 @@ class BillCreatorControllerTest {
     }
 
     @ParameterizedTest
-    @DisplayName("Statement, Branch, MC/DC Coverage Testing for checkQuantity() method!")
+    @DisplayName("Statement, Branch, Coverage Testing for checkQuantity() method!")
     @CsvSource({
             "-5, false",
             "6, true",
             "abc, false"
     })
-    void checkQuantityStatementBranchMCDC(String quantity, boolean result) {
+    void checkQuantityStatementBranch(String quantity, boolean result) {
         try {
             Platform.runLater(() -> {
                 Alert mockAlert = mock(Alert.class);
@@ -106,6 +106,24 @@ class BillCreatorControllerTest {
             "abc, false"
     })
     void checkQuantityCondition(String quantity, boolean result) {
+        try {
+            Platform.runLater(() -> {
+                Alert mockAlert = mock(Alert.class);
+                int quantityInt = Integer.parseInt(quantity);
+                Assertions.assertEquals(result, ManageBillsController.checkQuantity(quantityInt, book));
+            });
+        } catch (NumberFormatException ex) {
+            Assertions.assertFalse(result);
+        }
+    }
+
+    @ParameterizedTest
+    @DisplayName("MC/DC Coverage Testing for checkQuantity() method!")
+    @CsvSource({
+            "11, false",
+            "5, true"
+    })
+    void checkQuantityMCDC(String quantity, boolean result) {
         try {
             Platform.runLater(() -> {
                 Alert mockAlert = mock(Alert.class);

@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/byte_buddy_1_12_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mockito_core_4_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mockito_junit_jupiter_4_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/objenesis_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controller/BillCreatorControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/util/JavaFXInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookStore_Ilian_Janopullo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookStore_Ilian_Janopullo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controller/BillCreatorControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controller/BillCreatorControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +262,7 @@
       <workItem from="1732996758842" duration="15000" />
       <workItem from="1735162156901" duration="191000" />
       <workItem from="1735165584361" duration="33000" />
-      <workItem from="1735377306957" duration="11649000" />
+      <workItem from="1735377306957" duration="12157000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
