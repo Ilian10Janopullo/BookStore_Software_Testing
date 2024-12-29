@@ -110,7 +110,7 @@ public class ManagingBooksController {
             }
         }
 
-        if (checkForValidations || !checkIsbnForUniqueness || isbn.isEmpty()) {
+        if (!checkForValidations || !checkIsbnForUniqueness || isbn.isEmpty()) {
             Alert alertForIsbn;
             alertForIsbn = new Alert(Alert.AlertType.ERROR);
             alertForIsbn.setContentText("ISBN is not correct or is not unique!");

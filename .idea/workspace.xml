@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
+      <change afterPath="$PROJECT_DIR$/test/controller/ManagingBooksControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controller/BillCreatorControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controller/BillCreatorControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ManagingBooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ManagingBooksController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -52,42 +53,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BookStore.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.BillCreatorControllerTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BillCreatorControllerTest.checkQuantity.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BillCreatorControllerTest.checkQuantityECT (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BillCreatorControllerTest.checkQuantityECT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BillCreatorControllerTest.checkQuantityStatement.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BillCreatorControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Softwares/objenesis-3.2.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15475024&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BookStore.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.BillCreatorControllerTest (1).executor": "Run",
+    "JUnit.BillCreatorControllerTest.checkQuantity.executor": "Run",
+    "JUnit.BillCreatorControllerTest.checkQuantityECT (1).executor": "Run",
+    "JUnit.BillCreatorControllerTest.checkQuantityECT.executor": "Run",
+    "JUnit.BillCreatorControllerTest.checkQuantityStatement.executor": "Run",
+    "JUnit.BillCreatorControllerTest.executor": "Run",
+    "JUnit.ManagingBooksControllerTest.checkIsbn.executor": "Run",
+    "JUnit.ManagingBooksControllerTest.checkIsbnBranch (1).executor": "Run",
+    "JUnit.ManagingBooksControllerTest.checkIsbnBranch.executor": "Run",
+    "JUnit.ManagingBooksControllerTest.checkIsbnCondition.executor": "Run",
+    "JUnit.ManagingBooksControllerTest.checkIsbnECT.executor": "Run",
+    "JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1).executor": "Run",
+    "JUnit.ManagingBooksControllerTest.checkIsbnMCDC.executor": "Run",
+    "JUnit.ManagingBooksControllerTest.checkIsbnStatement.executor": "Coverage",
+    "JUnit.ManagingBooksControllerTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Softwares/objenesis-3.2.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15475024",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pathVariables",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\BookStore" />
@@ -99,7 +109,7 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BillCreatorControllerTest (1)">
+  <component name="RunManager" selected="JUnit.ManagingBooksControllerTest">
     <configuration name="BookStore" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="BookStore_Ilian_Janopullo" />
@@ -108,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillCreatorControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagingBooksControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookStore_Ilian_Janopullo" />
       <extension name="coverage">
         <pattern>
@@ -117,13 +127,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.BillCreatorControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillCreatorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagingBooksControllerTest.checkIsbnBranch (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookStore_Ilian_Janopullo" />
       <extension name="coverage">
         <pattern>
@@ -132,31 +142,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.BillCreatorControllerTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\User\Softwares\javafx-sdk-23.0.1\lib --add-modules javafx.controls,javafx.fxml" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BillCreatorControllerTest.checkQuantityECT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookStore_Ilian_Janopullo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.BillCreatorControllerTest" />
-      <option name="METHOD_NAME" value="checkQuantityECT(int,boolean)" />
+      <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
+      <option name="METHOD_NAME" value="checkIsbnBranch(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillCreatorControllerTest.checkQuantityStatement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagingBooksControllerTest.checkIsbnCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookStore_Ilian_Janopullo" />
       <extension name="coverage">
         <pattern>
@@ -165,14 +158,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.BillCreatorControllerTest" />
-      <option name="METHOD_NAME" value="checkQuantityStatement(java.lang.String,boolean)" />
+      <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
+      <option name="METHOD_NAME" value="checkIsbnCondition(java.lang.String,boolean)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="controller in BookStore_Ilian_Janopullo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagingBooksControllerTest.checkIsbnMCDC (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookStore_Ilian_Janopullo" />
       <extension name="coverage">
         <pattern>
@@ -181,28 +174,44 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
+      <option name="METHOD_NAME" value="checkIsbnMCDC(java.lang.String,boolean)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagingBooksControllerTest.checkIsbnMCDC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookStore_Ilian_Janopullo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
+      <option name="METHOD_NAME" value="checkIsbnMCDC(boolean,boolean,boolean,boolean)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.BookStore" />
-      <item itemvalue="JUnit.BillCreatorControllerTest (1)" />
-      <item itemvalue="JUnit.BillCreatorControllerTest.checkQuantityStatement" />
-      <item itemvalue="JUnit.BillCreatorControllerTest" />
-      <item itemvalue="JUnit.BillCreatorControllerTest.checkQuantityECT" />
-      <item itemvalue="JUnit.controller in BookStore_Ilian_Janopullo" />
+      <item itemvalue="JUnit.ManagingBooksControllerTest" />
+      <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnBranch (1)" />
+      <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnCondition" />
+      <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC" />
+      <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BillCreatorControllerTest (1)" />
-        <item itemvalue="JUnit.BillCreatorControllerTest.checkQuantityStatement" />
-        <item itemvalue="JUnit.BillCreatorControllerTest" />
-        <item itemvalue="JUnit.BillCreatorControllerTest.checkQuantityECT" />
-        <item itemvalue="JUnit.controller in BookStore_Ilian_Janopullo" />
+        <item itemvalue="JUnit.ManagingBooksControllerTest" />
+        <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1)" />
+        <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnCondition" />
+        <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC" />
+        <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnBranch (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +272,8 @@
       <workItem from="1735162156901" duration="191000" />
       <workItem from="1735165584361" duration="33000" />
       <workItem from="1735377306957" duration="12316000" />
-      <workItem from="1735430173760" duration="203000" />
+      <workItem from="1735430173760" duration="467000" />
+      <workItem from="1735485100919" duration="7250000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -387,5 +397,10 @@
     <MESSAGE value="Update" />
     <MESSAGE value="Update after Static Testing" />
     <option name="LAST_COMMIT_MESSAGE" value="Update after Static Testing" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BookStore_Software_Testing$ManagingBooksControllerTest_checkIsbnStatement.ic" NAME="ManagingBooksControllerTest.checkIsbnStatement Coverage Results" MODIFIED="1735488685940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
   </component>
 </project>
