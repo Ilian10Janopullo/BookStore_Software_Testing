@@ -2,9 +2,7 @@ package controller;
 
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
-import model.Author;
 import model.Book;
-import model.Gender;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -19,25 +17,11 @@ class BillCreatorControllerTest {
     private static Book book;
 
     @BeforeAll
-    @DisplayName("Check the creation of the objects!")
     static void setUp() {
 
         new JavaFXInitializer().init();
-
-        Author author = new Author("Viktor", "Hygo", Gender.MALE);
-        book = new Book("978-99927-55-06-7", "Katedralja e Parisit", "Test", 10.0, author, true, 10);
-
-        Assertions.assertAll(
-                () -> Assertions.assertEquals("978-99927-55-06-7", book.getIsbn()),
-                () -> Assertions.assertEquals("Katedralja e Parisit", book.getTitle()),
-                () -> Assertions.assertEquals("Test", book.getDescription()),
-                () -> Assertions.assertEquals(10.0, book.getPrice()),
-                () -> Assertions.assertEquals("Viktor", book.getAuthor().getFirstName()),
-                () -> Assertions.assertEquals("Hygo", book.getAuthor().getLastName()),
-                () -> Assertions.assertEquals(Gender.MALE, book.getAuthor().getGender()),
-                () -> Assertions.assertTrue(book.isPaperback()),
-                () -> Assertions.assertEquals(10, book.getQuantity())
-        );
+        book = mock(Book.class, CALLS_REAL_METHODS);
+        when(book.getQuantity()).thenReturn(10);
     }
 
     @ParameterizedTest
@@ -52,7 +36,7 @@ class BillCreatorControllerTest {
     @ParameterizedTest
     @DisplayName("Equivalence Class Testing For checkQuantity() method!")
     @CsvSource(value = {
-            "Integer.MIN_VALUE, false",
+            "-2147483648, false",
             "-5, false",
             "0, false",
             "1, true",
