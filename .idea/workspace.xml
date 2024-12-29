@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
-      <change afterPath="$PROJECT_DIR$/test/controller/ManagingBooksControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/dao/daoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ManagingBooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ManagingBooksController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +63,7 @@
     "JUnit.BillCreatorControllerTest.checkQuantityECT.executor": "Run",
     "JUnit.BillCreatorControllerTest.checkQuantityStatement.executor": "Run",
     "JUnit.BillCreatorControllerTest.executor": "Run",
+    "JUnit.LoadFromFileImplementationTest.executor": "Run",
     "JUnit.ManagingBooksControllerTest.checkIsbn.executor": "Run",
     "JUnit.ManagingBooksControllerTest.checkIsbnBranch (1).executor": "Run",
     "JUnit.ManagingBooksControllerTest.checkIsbnBranch.executor": "Run",
@@ -109,11 +109,26 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ManagingBooksControllerTest">
+  <component name="RunManager" selected="JUnit.LoadFromFileImplementationTest">
     <configuration name="BookStore" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="BookStore_Ilian_Janopullo" />
       <option name="VM_PARAMETERS" value="--module-path C:\Users\User\Softwares\javafx-sdk-23.0.1\lib --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoadFromFileImplementationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookStore_Ilian_Janopullo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.LoadFromFileImplementationTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,22 +144,6 @@
       <option name="PACKAGE_NAME" value="controller" />
       <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagingBooksControllerTest.checkIsbnBranch (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookStore_Ilian_Janopullo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
-      <option name="METHOD_NAME" value="checkIsbnBranch(java.lang.String)" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -199,19 +198,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.BookStore" />
+      <item itemvalue="JUnit.LoadFromFileImplementationTest" />
       <item itemvalue="JUnit.ManagingBooksControllerTest" />
-      <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnBranch (1)" />
       <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnCondition" />
       <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC" />
       <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoadFromFileImplementationTest" />
         <item itemvalue="JUnit.ManagingBooksControllerTest" />
         <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1)" />
         <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnCondition" />
         <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC" />
-        <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnBranch (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -273,7 +272,8 @@
       <workItem from="1735165584361" duration="33000" />
       <workItem from="1735377306957" duration="12316000" />
       <workItem from="1735430173760" duration="467000" />
-      <workItem from="1735485100919" duration="7250000" />
+      <workItem from="1735485100919" duration="7942000" />
+      <workItem from="1735503686616" duration="818000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
