@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
-      <change afterPath="$PROJECT_DIR$/test/dao/daoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controller/ManagerUsersControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookStore_Ilian_Janopullo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookStore_Ilian_Janopullo.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,7 +49,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2b34Pa7aguZUQGHLcf3azj2wTRI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,6 +68,9 @@
     "JUnit.BillCreatorControllerTest.checkQuantityStatement.executor": "Run",
     "JUnit.BillCreatorControllerTest.executor": "Run",
     "JUnit.LoadFromFileImplementationTest.executor": "Run",
+    "JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence (1).executor": "Run",
+    "JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence.executor": "Run",
+    "JUnit.ManagerUsersControllerTest.testEquivalencePartitioning.executor": "Run",
     "JUnit.ManagingBooksControllerTest.checkIsbn.executor": "Run",
     "JUnit.ManagingBooksControllerTest.checkIsbnBranch (1).executor": "Run",
     "JUnit.ManagingBooksControllerTest.checkIsbnBranch.executor": "Run",
@@ -82,7 +89,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "TestManagerUsersController",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Softwares/objenesis-3.2.jar",
@@ -91,7 +98,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15475024",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pathVariables",
@@ -109,11 +116,11 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoadFromFileImplementationTest">
+  <component name="RunManager" selected="JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence (1)">
     <configuration name="BookStore" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="BookStore_Ilian_Janopullo" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\User\Softwares\javafx-sdk-23.0.1\lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-21.0-2.1/lib --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,7 +135,56 @@
       </extension>
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.LoadFromFileImplementationTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerUsersControllerTest.testCheckBirthdateEquivalence (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookStore_Ilian_Janopullo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ManagerUsersControllerTest" />
+      <option name="METHOD_NAME" value="testCheckBirthdateEquivalence(java.lang.String,java.lang.String,java.lang.String,boolean)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerUsersControllerTest.testCheckBirthdateEquivalence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookStore_Ilian_Janopullo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ManagerUsersControllerTest" />
+      <option name="METHOD_NAME" value="testCheckBirthdateEquivalence(int,int,int,boolean)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerUsersControllerTest.testEquivalencePartitioning" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookStore_Ilian_Janopullo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ManagerUsersControllerTest" />
+      <option name="METHOD_NAME" value="testEquivalencePartitioning(int,int,int,boolean)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,69 +204,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagingBooksControllerTest.checkIsbnCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookStore_Ilian_Janopullo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
-      <option name="METHOD_NAME" value="checkIsbnCondition(java.lang.String,boolean)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagingBooksControllerTest.checkIsbnMCDC (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookStore_Ilian_Janopullo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
-      <option name="METHOD_NAME" value="checkIsbnMCDC(java.lang.String,boolean)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagingBooksControllerTest.checkIsbnMCDC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookStore_Ilian_Janopullo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
-      <option name="METHOD_NAME" value="checkIsbnMCDC(boolean,boolean,boolean,boolean)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.BookStore" />
+      <item itemvalue="JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence" />
+      <item itemvalue="JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence (1)" />
+      <item itemvalue="JUnit.ManagerUsersControllerTest.testEquivalencePartitioning" />
       <item itemvalue="JUnit.LoadFromFileImplementationTest" />
       <item itemvalue="JUnit.ManagingBooksControllerTest" />
-      <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnCondition" />
-      <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC" />
-      <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence (1)" />
+        <item itemvalue="JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence" />
+        <item itemvalue="JUnit.ManagerUsersControllerTest.testEquivalencePartitioning" />
         <item itemvalue="JUnit.LoadFromFileImplementationTest" />
         <item itemvalue="JUnit.ManagingBooksControllerTest" />
-        <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1)" />
-        <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnCondition" />
-        <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC" />
       </list>
     </recent_temporary>
   </component>
