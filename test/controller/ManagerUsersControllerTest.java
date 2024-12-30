@@ -3,6 +3,7 @@ package controller;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import util.JavaFXInitializer;
@@ -20,6 +21,7 @@ public class ManagerUsersControllerTest {
         controller = mock(ManageUsersController.class, CALLS_REAL_METHODS); // Mock the controller
     }
     @ParameterizedTest
+    @DisplayName("Equivalence Class Testing for checkBirthdate")
     @CsvSource({
             "2000, 2, 29, true",  // Leap year
             "2023, 1, 1, true",   // Start of year
@@ -41,7 +43,9 @@ public class ManagerUsersControllerTest {
             "2023, 2, 29, false", // Invalid day for non-leap year
             "2023, 2, xyz, false",// Non-numeric day
             "2023, 2, @, false",  // Special character day
-            "2023, 2, , false"    // Null day
+            "2023, 2, , false",  // Null day
+            "-1, 1, 1, false",    // Extreme negative year
+            "3000, 1, 1, false"  // Extreme future year
     })
     void testCheckBirthdateEquivalence(String year, String month, String day, boolean expected) {
         Platform.runLater(() -> {
@@ -57,6 +61,40 @@ public class ManagerUsersControllerTest {
             } catch (NumberFormatException | NullPointerException e) {
                 assertFalse(expected);
             }
+        });
+    }
+
+    @ParameterizedTest
+    @DisplayName("Boundary Value Testing for checkBirthdate")
+    @CsvSource({
+            // Year Boundary Cases
+            "2007, 1, 1, true",   // Minimum valid age (16 years)
+            "2008, 1, 1, false",  // Just below minimum
+            "1958, 1, 1, true",   // Maximum valid age (65 years)
+            "1957, 1, 1, false",  // Just above maximum
+            "-1, 1, 1, false",    // Negative year
+            "3000, 1, 1, false",  // Future year
+            // Day Boundary Cases
+            "2000, 1, 0, false",  // Day below range (January)
+            "2000, 1, 32, false", // Day above range (January)
+            "2000, 4, 31, false", // Invalid day for April
+            "2001, 2, 28, true",  // Maximum day for February Non-leap year
+            "2000, 2, 29, true",  // Maximum day for February Leap year
+            "2001, 2, 29, false", // Invalid day for February Non-leap year
+            // Month Boundary Cases
+            "2000, 0, 15, false", // Month below range
+            "2000, 13, 15, false", // Month above range
+            "2000, 8, 15, true", // Nominal month value
+            "2000, 1, 15, true", // Month minimum range
+            "2000, 12, 15, true" // Month maximum range
+    })
+    void testCheckBirthdateBoundary(int year, int month, int day, boolean expected) {
+        Platform.runLater(() -> {
+            Alert mockAlert = mock(Alert.class);
+            doNothing().when(mockAlert).show();
+
+            boolean result = controller.checkBirthdate(day, month, year);
+            assertEquals(expected, result);
         });
     }
 }
