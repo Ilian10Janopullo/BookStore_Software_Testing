@@ -97,4 +97,40 @@ public class ManagerUsersControllerTest {
             assertEquals(expected, result);
         });
     }
+
+    @ParameterizedTest
+    @DisplayName("Code Coverage Testing for checkBirthdate")
+    @CsvSource({
+            // Age Boundary Cases
+            "2007,1,1,false",   // Minimum invalid age (just below 16)
+            "1958,1,1,false",  // Maximum invalid age (just above 65)
+            "2000,1,1,true",     // Valid age, month, and day
+            "-1,1,1,false",  // Invalid negative year
+            "3000,1,1,false",   // Invalid future year
+            "2000,0,15,false", // Invalid month (below range)
+            "2000,13,15,false", // Invalid month (above range)
+            "2000,1,0,false",    // Invalid day (below range)
+            "2000,1,32,false",   // Invalid day (above range for January)
+            "2000,4,31,false",   // Invalid day for April (30-day month)
+            "2001,2,28,true",    // Valid February day (non-leap year)
+            "2000,2,29,true",    // Valid February day (leap year)
+            "2001,2,29,false",   // Invalid February day (non-leap year)
+            "2000,2,30,false",   // Invalid February day (leap year)
+            "2000,2,1,true",     // First valid day of February
+            "2000,2,28,true",    // Last valid day of February (non-leap year)
+            "2000,2,29,true",    // Last valid day of February (leap year)
+            "2024,2,29,true",    // Valid leap year (future)
+            "2000,3,31,true",    // Valid day in 31-day month (March)
+            "2000,4,30,true"    // Valid day in 30-day month (April)
+    })
+    void testCheckBirthdateCoverage(int year, int month, int day, boolean expected) {
+        Platform.runLater(() -> {
+            Alert mockAlert = mock(Alert.class);
+            doNothing().when(mockAlert).show();
+
+            boolean result = controller.checkBirthdate(day, month, year);
+            assertEquals(expected, result);
+        });
+    }
+
 }
