@@ -20,6 +20,11 @@ public interface dao<T> {
         }
     }
     default boolean addToFileImplementation(T t, ObservableList<T> list, File DATA_FILE) {
+
+        if(t == null || DATA_FILE == null) {
+            return false;
+        }
+
         try (FileOutputStream outputStream = new FileOutputStream(DATA_FILE, true)) {
             ObjectOutputStream writer;
             if (DATA_FILE.length() > 0) {
@@ -36,6 +41,14 @@ public interface dao<T> {
     }
 
     default boolean deleteImplementation(T t, ObservableList<T> list, File DATA_FILE) {
+        if(t == null || DATA_FILE == null) {
+            return false;
+        }
+
+        if(!list.contains(t)){
+            return false;
+        }
+
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(DATA_FILE))) {
             for (T toDelete : list) {
                 if (!toDelete.equals(t))
@@ -46,9 +59,12 @@ public interface dao<T> {
         } catch (IOException ex) {
             return false;
         }
-    }
+        }
 
     default boolean deleteAllImplementation(ObservableList<T> list, List<T> listToDelete, File DATA_FILE) {
+        if(list == null || DATA_FILE == null) {
+            return false;
+        }
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(DATA_FILE))) {
             for (T t : list) {
                 if (!listToDelete.contains(t))

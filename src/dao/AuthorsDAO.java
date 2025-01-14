@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.List;
 
 public class AuthorsDAO implements dao {
-    public static final String FILE_PATH = "database/authors.dat";
+    public static String FILE_PATH = "database/authors.dat";
     private static final File DATA_FILE = new File(FILE_PATH);
     private final ObservableList<Author> authors = FXCollections.observableArrayList();
 

@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 public class BillPrintingDAO {
 
-    public static final String FILE_PATH = "database/billsPrinted.txt";
+    public static String FILE_PATH = "database/billsPrinted.txt";
     private static final File DATA_FILE = new File(FILE_PATH);
 
     public void addBillToFile(ObservableList<Bill> billsToBeAdded) throws IOException {

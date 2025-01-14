@@ -2,24 +2,34 @@ package controller;
 
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
+import model.UsersOfTheSystem;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.mockito.Mockito;
 import util.JavaFXInitializer;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class ManagerUsersControllerTest {
     private static ManageUsersController controller;
+    private static UsersOfTheSystem mockUser;
 
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
         new JavaFXInitializer().init(); // Initialize JavaFX for UI components
         controller = mock(ManageUsersController.class, CALLS_REAL_METHODS); // Mock the controller
     }
+
+    @BeforeEach
+    void setUp() {
+        mockUser = mock(UsersOfTheSystem.class);
+    }
+
     @ParameterizedTest
     @DisplayName("Equivalence Class Testing for checkBirthdate")
     @CsvSource({
@@ -133,4 +143,57 @@ public class ManagerUsersControllerTest {
         });
     }
 
+    @Test
+    @DisplayName("Test checkFirstName() with Valid Names")
+    void testCheckFirstNameValid() {
+        Platform.runLater(() -> {
+            String validName = "John";
+            assertTrue(controller.checkFirstName(validName));
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkFirstName() with Invalid Names")
+    void testCheckFirstNameInvalid() {
+        Platform.runLater(() -> {
+            String invalidName = "John123";
+            assertFalse(controller.checkFirstName(invalidName));
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkLastName() with Valid Names")
+    void testCheckLastNameValid() {
+        Platform.runLater(() -> {
+            String validName = "Doe";
+            assertTrue(controller.checkLastName(validName));
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkLastName() with Invalid Names")
+    void testCheckLastNameInvalid() {
+        Platform.runLater(() -> {
+            String invalidName = "Doe@123";
+            assertFalse(controller.checkLastName(invalidName));
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkUsername() with Valid Usernames")
+    void testCheckUsernameValid() {
+        Platform.runLater(() -> {
+            String validUsername = "john_doe";
+            assertTrue(controller.checkUsername(validUsername));
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkUsername() with Invalid Usernames")
+    void testCheckUsernameInvalid() {
+        Platform.runLater(() -> {
+            String invalidUsername = "John@Doe";
+            assertFalse(controller.checkUsername(invalidUsername));
+        });
+    }
 }

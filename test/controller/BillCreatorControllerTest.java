@@ -1,27 +1,43 @@
 package controller;
 
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import javafx.stage.Stage;
 import model.Book;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
+import model.BooksOrdered;
+import model.UsersOfTheSystem;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.mockito.Mockito;
 import util.JavaFXInitializer;
 
+import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class BillCreatorControllerTest {
 
     private static Book book;
+    private BillCreatorController controller;
+    private Stage mockStage;
+    private UsersOfTheSystem mockUser;
 
     @BeforeAll
-    static void setUp() {
-
+    static void setUpClass() {
         new JavaFXInitializer().init();
         book = mock(Book.class, CALLS_REAL_METHODS);
         when(book.getQuantity()).thenReturn(10);
+    }
+
+    @BeforeEach
+    void setUp() {
+        mockStage = mock(Stage.class);
+        mockUser = mock(UsersOfTheSystem.class);
+        controller = new BillCreatorController(mockStage, mockUser);
     }
 
     @ParameterizedTest
@@ -30,7 +46,7 @@ class BillCreatorControllerTest {
             "1", "2", "5", "9", "10"
     })
     void checkQuantityBDV(int quantity) {
-        Assertions.assertTrue(ManageBillsController.checkQuantity(quantity, book));
+        Assertions.assertTrue(BillCreatorController.checkQuantity(quantity, book));
     }
 
     @ParameterizedTest
@@ -55,7 +71,7 @@ class BillCreatorControllerTest {
             Platform.runLater(() -> {
                 Alert mockAlert = mock(Alert.class);
                 int quantityInt = Integer.parseInt(quantity);
-                Assertions.assertEquals(result, ManageBillsController.checkQuantity(quantityInt, book));
+                Assertions.assertEquals(result, BillCreatorController.checkQuantity(quantityInt, book));
             });
         } catch (NumberFormatException ex) {
             Assertions.assertFalse(result);
@@ -74,7 +90,7 @@ class BillCreatorControllerTest {
             Platform.runLater(() -> {
                 Alert mockAlert = mock(Alert.class);
                 int quantityInt = Integer.parseInt(quantity);
-                Assertions.assertEquals(result, ManageBillsController.checkQuantity(quantityInt, book));
+                Assertions.assertEquals(result, BillCreatorController.checkQuantity(quantityInt, book));
             });
         } catch (NumberFormatException ex) {
             Assertions.assertFalse(result);
@@ -94,7 +110,7 @@ class BillCreatorControllerTest {
             Platform.runLater(() -> {
                 Alert mockAlert = mock(Alert.class);
                 int quantityInt = Integer.parseInt(quantity);
-                Assertions.assertEquals(result, ManageBillsController.checkQuantity(quantityInt, book));
+                Assertions.assertEquals(result, BillCreatorController.checkQuantity(quantityInt, book));
             });
         } catch (NumberFormatException ex) {
             Assertions.assertFalse(result);
@@ -112,10 +128,73 @@ class BillCreatorControllerTest {
             Platform.runLater(() -> {
                 Alert mockAlert = mock(Alert.class);
                 int quantityInt = Integer.parseInt(quantity);
-                Assertions.assertEquals(result, ManageBillsController.checkQuantity(quantityInt, book));
+                Assertions.assertEquals(result, BillCreatorController.checkQuantity(quantityInt, book));
             });
         } catch (NumberFormatException ex) {
             Assertions.assertFalse(result);
         }
+    }
+
+    @Test
+    @DisplayName("Test Submit() with Valid Orders")
+    void testSubmitValidOrders() {
+        Platform.runLater(() -> {
+            BooksOrdered mockOrder = mock(BooksOrdered.class);
+            when(mockOrder.getIsbn()).thenReturn("978-3-16-148410-0");
+            when(mockOrder.getQuantityToOrderOfBookOrdered()).thenReturn(2);
+
+            ObservableList<BooksOrdered> mockOrders = FXCollections.observableArrayList(mockOrder);
+            controller.getView().getTableViewOfBooksToOrder().setItems(mockOrders);
+
+            assertDoesNotThrow(() -> controller.Submit(null));
+        });
+    }
+
+    @Test
+    @DisplayName("Test Submit() with Invalid Orders")
+    void testSubmitInvalidOrders() {
+        Platform.runLater(() -> {
+            BooksOrdered mockOrder = mock(BooksOrdered.class);
+            when(mockOrder.getIsbn()).thenReturn("978-3-16-148410-0");
+            when(mockOrder.getQuantityToOrderOfBookOrdered()).thenReturn(20); // Exceeds book quantity
+
+            ObservableList<BooksOrdered> mockOrders = FXCollections.observableArrayList(mockOrder);
+            controller.getView().getTableViewOfBooksToOrder().setItems(mockOrders);
+
+            assertDoesNotThrow(() -> controller.Submit(null));
+        });
+    }
+
+    @Test
+    @DisplayName("Test Back() Navigation")
+    void testBackNavigation() {
+        Platform.runLater(() -> {
+            assertDoesNotThrow(() -> controller.Back(null));
+        });
+    }
+
+    @Test
+    @DisplayName("Test onBookRemove() with Orders")
+    void testOnBookRemoveWithOrders() {
+        Platform.runLater(() -> {
+            BooksOrdered mockOrder = mock(BooksOrdered.class);
+            when(mockOrder.getIsbn()).thenReturn("978-3-16-148410-0");
+
+            ObservableList<BooksOrdered> mockOrders = FXCollections.observableArrayList(mockOrder);
+            controller.getView().getTableViewOfBooksToOrder().setItems(mockOrders);
+
+            assertDoesNotThrow(() -> controller.onBookRemove(null));
+        });
+    }
+
+    @Test
+    @DisplayName("Test onBookRemove() with Empty Orders")
+    void testOnBookRemoveWithEmptyOrders() {
+        Platform.runLater(() -> {
+            ObservableList<BooksOrdered> emptyOrders = FXCollections.observableArrayList();
+            controller.getView().getTableViewOfBooksToOrder().setItems(emptyOrders);
+
+            assertDoesNotThrow(() -> controller.onBookRemove(null));
+        });
     }
 }

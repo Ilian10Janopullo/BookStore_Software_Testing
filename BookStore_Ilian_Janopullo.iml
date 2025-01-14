@@ -40,5 +40,6 @@
     <orderEntry type="library" name="byte-buddy-1.12.22" level="project" />
     <orderEntry type="library" name="objenesis-3.2" level="project" />
     <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="testfx-junit5-4.0.18" level="project" />
   </component>
 </module>

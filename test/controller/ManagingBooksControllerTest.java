@@ -4,18 +4,26 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import javafx.stage.Stage;
 import model.Book;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
+import model.Role;
+import model.UsersOfTheSystem;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import util.JavaFXInitializer;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.mockito.Mockito.*;
 
 class ManagingBooksControllerTest {
 
     private static ObservableList<Book> books;
+    private static Stage mockStage;
+    private static UsersOfTheSystem mockUser;
+    private static ManagingBooksController controller;
 
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
@@ -25,6 +33,15 @@ class ManagingBooksControllerTest {
         books.add(mock(Book.class, CALLS_REAL_METHODS));
         when(mock(Book.class, CALLS_REAL_METHODS).getIsbn()).thenReturn("9780-59-65-2068-8");
 
+        mockStage = mock(Stage.class);
+        mockUser = mock(UsersOfTheSystem.class);
+        when(mockUser.getRole()).thenReturn(Role.ADMIN);
+
+    }
+
+    @BeforeEach
+    void setUp() {
+        controller = new ManagingBooksController(mockStage, mockUser);
     }
 
     @ParameterizedTest
@@ -105,7 +122,6 @@ class ManagingBooksControllerTest {
 
     }
 
-
     @ParameterizedTest
     @DisplayName("Branch Coverage Testing with empty ObservableList for checkISBN() in ManagingBookController!")
     @CsvSource( value = {
@@ -174,6 +190,139 @@ class ManagingBooksControllerTest {
             Assertions.assertEquals(expected, ManagingBooksController.checkIsbn(isbn, books));
         });
 
+    }
+
+    @Test
+    @DisplayName("Test Back() for Admin Role")
+    void testBackForAdmin() {
+        Platform.runLater(() -> {
+            controller.Back(null);
+            verify(mockStage, atLeastOnce()).getScene();
+        });
+    }
+
+    @Test
+    @DisplayName("Test Back() for Manager Role")
+    void testBackForManager() {
+        when(mockUser.getRole()).thenReturn(Role.MANAGER);
+
+        Platform.runLater(() -> {
+            controller.Back(null);
+            // Ensure backFunction is called with correct role indicator
+            assertDoesNotThrow(() -> controller.Back(null));
+        });
+    }
+
+    @Test
+    @DisplayName("Test onBookDelete() with Selected Books")
+    void testOnBookDelete() {
+        ObservableList<Book> selectedBooks = FXCollections.observableArrayList();
+        Book mockBook = mock(Book.class);
+        selectedBooks.add(mockBook);
+
+        controller.getView().getTableView().getSelectionModel().select(mockBook);
+
+        Platform.runLater(() -> {
+            assertDoesNotThrow(() -> controller.onBookDelete(null));
+        });
+    }
+
+    @Test
+    @DisplayName("Test Submit() with Valid Data")
+    void testSubmitWithValidData() {
+        Platform.runLater(() -> {
+            controller.getView().setIsbnTF("978-3-16-148410-0");
+            controller.getView().setTitleTF("Test Book");
+            controller.getView().setPriceTF("100");
+            controller.getView().setDescriptionTA("Test Description");
+            controller.getView().setAuthorComboBox(); // Simulate author selection
+
+            assertDoesNotThrow(() -> controller.Submit(null));
+        });
+    }
+
+    @Test
+    @DisplayName("Test Submit() with Invalid Data")
+    void testSubmitWithInvalidData() {
+        Platform.runLater(() -> {
+            controller.getView().setIsbnTF("");
+            controller.getView().setTitleTF("");
+            controller.getView().setPriceTF("-10"); // Invalid price
+
+            assertDoesNotThrow(() -> controller.Submit(null));
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkPrice() with Invalid Price")
+    void testCheckPriceInvalid() {
+        Platform.runLater(() -> {
+            boolean result = ManagingBooksController.checkPrice("-1");
+            assertFalse(result);
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkPrice() with Valid Price")
+    void testCheckPriceValid() {
+        Platform.runLater(() -> {
+            boolean result = ManagingBooksController.checkPrice("100");
+            assertTrue(result);
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkDescription() with Empty Description")
+    void testCheckDescriptionEmpty() {
+        Platform.runLater(() -> {
+            boolean result = ManagingBooksController.checkDescription("");
+            assertFalse(result);
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkDescription() with Valid Description")
+    void testCheckDescriptionValid() {
+        Platform.runLater(() -> {
+            boolean result = ManagingBooksController.checkDescription("This is a valid description.");
+            assertTrue(result);
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkGenres() with No Genre Selected")
+    void testCheckGenresNone() {
+        Platform.runLater(() -> {
+            boolean result = ManagingBooksController.checkGenres(0);
+            assertFalse(result);
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkGenres() with Genres Selected")
+    void testCheckGenresSelected() {
+        Platform.runLater(() -> {
+            boolean result = ManagingBooksController.checkGenres(2);
+            assertTrue(result);
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkQuantity() with Invalid Quantity")
+    void testCheckQuantityInvalid() {
+        Platform.runLater(() -> {
+            boolean result = ManagingBooksController.checkQuantity("-5");
+            assertFalse(result);
+        });
+    }
+
+    @Test
+    @DisplayName("Test checkQuantity() with Valid Quantity")
+    void testCheckQuantityValid() {
+        Platform.runLater(() -> {
+            boolean result = ManagingBooksController.checkQuantity("10");
+            assertTrue(result);
+        });
     }
 
 }
