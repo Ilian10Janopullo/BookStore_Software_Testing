@@ -288,10 +288,12 @@ public class ManageBillsView extends BorderPane {
 
     public void setToDate() {
         this.toDate.setValue(null);
+        this.fromDateLb.setText(null);
     }
 
     public void setFromDate() {
         this.fromDate.setValue(null);
+        this.fromDateLb.setText(null);
     }
 
     public void setRevenueTf(String string) {

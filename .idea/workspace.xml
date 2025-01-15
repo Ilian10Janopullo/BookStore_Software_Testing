@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
-      <change afterPath="$PROJECT_DIR$/test/model/AdminTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/model/AuthorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/model/BillTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/model/BookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/model/BooksOrderedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/testfx_core_4_0_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/AdminMenuViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/BillCreatorViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/LoginViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/ManageBillsViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/SetPermissionsViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/TableManagingUsersViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/TableViewCheckingUsersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/BooksOrdered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BooksOrdered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookStore_Ilian_Janopullo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookStore_Ilian_Janopullo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ManageBillsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ManageBillsView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +72,7 @@
     "JUnit.AdminMenuControllerTest.executor": "Run",
     "JUnit.AdminMenuControllerTest.testControlPermissions.executor": "Run",
     "JUnit.AdminMenuControllerTest.testManageBooksWarningForNoAuthors.executor": "Run",
+    "JUnit.AdminMenuViewTest.executor": "Run",
     "JUnit.AdminTest.executor": "Run",
     "JUnit.AuthorTest.executor": "Run",
     "JUnit.AuthorsDAOTest.executor": "Run",
@@ -79,6 +84,7 @@
     "JUnit.BillCreatorControllerTest.checkQuantityECT.executor": "Run",
     "JUnit.BillCreatorControllerTest.checkQuantityStatement.executor": "Run",
     "JUnit.BillCreatorControllerTest.executor": "Run",
+    "JUnit.BillCreatorViewTest.executor": "Run",
     "JUnit.BillPrintingDAOTest.executor": "Run",
     "JUnit.BillTest.executor": "Run",
     "JUnit.BookTest.executor": "Run",
@@ -89,8 +95,12 @@
     "JUnit.CheckUsersControllerTest.executor": "Run",
     "JUnit.DaoImplementationTest.executor": "Run",
     "JUnit.HeaderlessObjectOutputStreamTest.executor": "Run",
+    "JUnit.LibrarianTest.executor": "Run",
     "JUnit.LoadFromFileImplementationTest.executor": "Run",
+    "JUnit.LoginViewTest.executor": "Run",
     "JUnit.ManageBillsControllerTest.executor": "Run",
+    "JUnit.ManageBillsViewTest.executor": "Run",
+    "JUnit.ManagerTest.executor": "Run",
     "JUnit.ManagerUsersControllerTest.executor": "Run",
     "JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence (1).executor": "Run",
     "JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence.executor": "Run",
@@ -108,7 +118,10 @@
     "JUnit.ManagingBooksControllerTest.executor": "Run",
     "JUnit.PermissionCombo15ControllerTest.executor": "Run",
     "JUnit.PermissionsDAOTest.executor": "Run",
+    "JUnit.SetPermissionsViewTest.executor": "Run",
     "JUnit.SetUpPermissionsControllerTest.executor": "Run",
+    "JUnit.TableManagingUsersViewTest.executor": "Run",
+    "JUnit.TableViewCheckingUsersTest.executor": "Run",
     "JUnit.UsersDAOTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -123,7 +136,7 @@
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Softwares/testfx-junit5-4.0.18.jar",
+    "last_opened_file_path": "C:/Users/User/Softwares/testfx-core-4.0.18.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,6 +157,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="view" />
       <recent name="model" />
       <recent name="dao" />
       <recent name="controller" />
@@ -362,7 +376,7 @@
       <workItem from="1736868114702" duration="5564000" />
       <workItem from="1736880254048" duration="10580000" />
       <workItem from="1736891176563" duration="42000" />
-      <workItem from="1736968279361" duration="2876000" />
+      <workItem from="1736968279361" duration="5107000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
