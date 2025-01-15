@@ -5,32 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/testfx_junit5_4_0_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controller/AdminMenuControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controller/BackFunctionMenuTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controller/CheckUsersControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controller/LoginControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controller/ManageBillsControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controller/ManagingAuthorsControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controller/SetUpPermissionsControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/dao/AuthorsDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/dao/BillPrintingDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/dao/HeaderlessObjectOutputStreamTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/dao/PermissionsDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/model/AdminTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/model/AuthorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/model/BillTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/model/BookTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/model/BooksOrderedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookStore_Ilian_Janopullo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookStore_Ilian_Janopullo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/billsPrinted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/database/billsPrinted.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empty_data_file.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/malformed_data_file.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/AuthorsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AuthorsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BillPrintingDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BillPrintingDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/PermissionsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/PermissionsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controller/BillCreatorControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controller/BillCreatorControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controller/ManagerUsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controller/ManagerUsersControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controller/ManagingBooksControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controller/ManagingBooksControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/dao/daoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/dao/daoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BooksOrdered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BooksOrdered.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +68,8 @@
     "JUnit.AdminMenuControllerTest.executor": "Run",
     "JUnit.AdminMenuControllerTest.testControlPermissions.executor": "Run",
     "JUnit.AdminMenuControllerTest.testManageBooksWarningForNoAuthors.executor": "Run",
+    "JUnit.AdminTest.executor": "Run",
+    "JUnit.AuthorTest.executor": "Run",
     "JUnit.AuthorsDAOTest.executor": "Run",
     "JUnit.AuthorsDAOTest.testDeleteNonexistentAuthor.executor": "Debug",
     "JUnit.BackFunctionMenuTest.executor": "Run",
@@ -96,8 +80,12 @@
     "JUnit.BillCreatorControllerTest.checkQuantityStatement.executor": "Run",
     "JUnit.BillCreatorControllerTest.executor": "Run",
     "JUnit.BillPrintingDAOTest.executor": "Run",
+    "JUnit.BillTest.executor": "Run",
     "JUnit.BookTest.executor": "Run",
+    "JUnit.BookTest.testSetAndGetAuthor.executor": "Run",
     "JUnit.BooksDAOTest.executor": "Run",
+    "JUnit.BooksOrderedTest.executor": "Run",
+    "JUnit.BooksOrderedTest.testEqualsWithMatchingObjects.executor": "Debug",
     "JUnit.CheckUsersControllerTest.executor": "Run",
     "JUnit.DaoImplementationTest.executor": "Run",
     "JUnit.HeaderlessObjectOutputStreamTest.executor": "Run",
@@ -220,17 +208,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerUsersControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookTest.testSetAndGetAuthor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookStore_Ilian_Janopullo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.*" />
+          <option name="PATTERN" value="model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.ManagerUsersControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.BookTest" />
+      <option name="METHOD_NAME" value="testSetAndGetAuthor" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -292,19 +281,19 @@
       <item itemvalue="Application.BookStore" />
       <item itemvalue="JUnit.ManagingBooksControllerTest" />
       <item itemvalue="JUnit.ManagingAuthorsControllerTest" />
+      <item itemvalue="JUnit.BookTest.testSetAndGetAuthor" />
       <item itemvalue="JUnit.ManagingAuthorsControllerTest (1)" />
       <item itemvalue="JUnit.AdminMenuControllerTest.testControlPermissions" />
-      <item itemvalue="JUnit.ManagerUsersControllerTest" />
       <item itemvalue="JUnit.AdminMenuControllerTest" />
       <item itemvalue="JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookTest.testSetAndGetAuthor" />
         <item itemvalue="JUnit.ManagingAuthorsControllerTest (1)" />
         <item itemvalue="JUnit.AdminMenuControllerTest" />
         <item itemvalue="JUnit.AdminMenuControllerTest.testControlPermissions" />
         <item itemvalue="JUnit.AdminMenuControllerTest" />
-        <item itemvalue="JUnit.ManagerUsersControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -372,6 +361,8 @@
       <workItem from="1736845750528" duration="1668000" />
       <workItem from="1736868114702" duration="5564000" />
       <workItem from="1736880254048" duration="10580000" />
+      <workItem from="1736891176563" duration="42000" />
+      <workItem from="1736968279361" duration="2876000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
