@@ -51,12 +51,20 @@ public class LoginView extends GridPane {
         this.enterUserName.setText("");
     }
 
+    public void setEnterUserName(String userName) {
+        this.enterUserName.setText(userName);
+    }
+
     public String getEnterPassword() {
         return enterPassword.getText();
     }
 
     public void setEnterPassword() {
         this.enterPassword.setText("");
+    }
+
+    public void setEnterPassword(String password) {
+        this.enterPassword.setText(password);
     }
 
     public Button getEnterBtn() {

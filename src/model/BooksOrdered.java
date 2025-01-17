@@ -25,6 +25,10 @@ public class BooksOrdered implements Serializable {
         this.date = calendar.getTime();
     }
 
+    public Date getDate() {
+        return date;
+    }
+
     public String getIsbn() {
         return isbnOfBookOrdered;
     }

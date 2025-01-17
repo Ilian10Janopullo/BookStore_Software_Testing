@@ -1,0 +1,248 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e19f6fd4-4743-4c08-b394-3a6b0a07817b\" name=\"Changes\" comment=\"Update after Static Testing\">\r\n      <change afterPath=\"$PROJECT_DIR$/test/dao/daoTest.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"JUnit5 Test Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <favorite-branches>\r\n      <branch-storage>\r\n        <map>\r\n          <entry type=\"LOCAL\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"Beta\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n        </map>\r\n      </branch-storage>\r\n    </favorite-branches>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2b34Pa7aguZUQGHLcf3azj2wTRI\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.BookStore.executor\": \"Run\",\r\n    \"Application.Unnamed.executor\": \"Run\",\r\n    \"Downloaded.Files.Path.Enabled\": \"false\",\r\n    \"JUnit.BillCreatorControllerTest (1).executor\": \"Run\",\r\n    \"JUnit.BillCreatorControllerTest.checkQuantity.executor\": \"Run\",\r\n    \"JUnit.BillCreatorControllerTest.checkQuantityECT (1).executor\": \"Run\",\r\n    \"JUnit.BillCreatorControllerTest.checkQuantityECT.executor\": \"Run\",\r\n    \"JUnit.BillCreatorControllerTest.checkQuantityStatement.executor\": \"Run\",\r\n    \"JUnit.BillCreatorControllerTest.executor\": \"Run\",\r\n    \"JUnit.LoadFromFileImplementationTest.executor\": \"Run\",\r\n    \"JUnit.ManagingBooksControllerTest.checkIsbn.executor\": \"Run\",\r\n    \"JUnit.ManagingBooksControllerTest.checkIsbnBranch (1).executor\": \"Run\",\r\n    \"JUnit.ManagingBooksControllerTest.checkIsbnBranch.executor\": \"Run\",\r\n    \"JUnit.ManagingBooksControllerTest.checkIsbnCondition.executor\": \"Run\",\r\n    \"JUnit.ManagingBooksControllerTest.checkIsbnECT.executor\": \"Run\",\r\n    \"JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1).executor\": \"Run\",\r\n    \"JUnit.ManagingBooksControllerTest.checkIsbnMCDC.executor\": \"Run\",\r\n    \"JUnit.ManagingBooksControllerTest.checkIsbnStatement.executor\": \"Coverage\",\r\n    \"JUnit.ManagingBooksControllerTest.executor\": \"Run\",\r\n    \"Repository.Attach.Annotations\": \"false\",\r\n    \"Repository.Attach.JavaDocs\": \"false\",\r\n    \"Repository.Attach.Sources\": \"false\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary\": \"JUnit5\",\r\n    \"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5\": \"\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/User/Softwares/objenesis-3.2.jar\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15475024\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"preferences.pathVariables\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\User\\IdeaProjects\\BookStore\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.Recents.Supers\">\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.RecentsKey\">\r\n      <recent name=\"controller\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.LoadFromFileImplementationTest\">\r\n    <configuration name=\"BookStore\" type=\"Application\" factoryName=\"Application\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.Main\" />\r\n      <module name=\"BookStore_Ilian_Janopullo\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path C:\\Users\\User\\Softwares\\javafx-sdk-23.0.1\\lib --add-modules javafx.controls,javafx.fxml\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"LoadFromFileImplementationTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"BookStore_Ilian_Janopullo\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"dao.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"dao\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"dao.LoadFromFileImplementationTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ManagingBooksControllerTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"BookStore_Ilian_Janopullo\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"controller.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"controller\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"controller.ManagingBooksControllerTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ManagingBooksControllerTest.checkIsbnCondition\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"BookStore_Ilian_Janopullo\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"controller.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"controller\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"controller.ManagingBooksControllerTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"checkIsbnCondition(java.lang.String,boolean)\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ManagingBooksControllerTest.checkIsbnMCDC (1)\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"BookStore_Ilian_Janopullo\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"controller.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"controller\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"controller.ManagingBooksControllerTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"checkIsbnMCDC(java.lang.String,boolean)\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ManagingBooksControllerTest.checkIsbnMCDC\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"BookStore_Ilian_Janopullo\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"controller.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"controller\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"controller.ManagingBooksControllerTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"checkIsbnMCDC(boolean,boolean,boolean,boolean)\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.BookStore\" />\r\n      <item itemvalue=\"JUnit.LoadFromFileImplementationTest\" />\r\n      <item itemvalue=\"JUnit.ManagingBooksControllerTest\" />\r\n      <item itemvalue=\"JUnit.ManagingBooksControllerTest.checkIsbnCondition\" />\r\n      <item itemvalue=\"JUnit.ManagingBooksControllerTest.checkIsbnMCDC\" />\r\n      <item itemvalue=\"JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1)\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.LoadFromFileImplementationTest\" />\r\n        <item itemvalue=\"JUnit.ManagingBooksControllerTest\" />\r\n        <item itemvalue=\"JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1)\" />\r\n        <item itemvalue=\"JUnit.ManagingBooksControllerTest.checkIsbnCondition\" />\r\n        <item itemvalue=\"JUnit.ManagingBooksControllerTest.checkIsbnMCDC\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e19f6fd4-4743-4c08-b394-3a6b0a07817b\" name=\"Changes\" comment=\"\" />\r\n      <created>1705430405498</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1705430405498</updated>\r\n      <workItem from=\"1705430406934\" duration=\"85000\" />\r\n      <workItem from=\"1705430508778\" duration=\"188000\" />\r\n      <workItem from=\"1705430706496\" duration=\"131000\" />\r\n      <workItem from=\"1705430879986\" duration=\"31000\" />\r\n      <workItem from=\"1705434692446\" duration=\"64000\" />\r\n      <workItem from=\"1705436216451\" duration=\"1782000\" />\r\n      <workItem from=\"1705438506004\" duration=\"1199000\" />\r\n      <workItem from=\"1705440090053\" duration=\"15000\" />\r\n      <workItem from=\"1705441059982\" duration=\"217000\" />\r\n      <workItem from=\"1705523343129\" duration=\"316000\" />\r\n      <workItem from=\"1705524282520\" duration=\"413000\" />\r\n      <workItem from=\"1705751780588\" duration=\"58000\" />\r\n      <workItem from=\"1705788629972\" duration=\"67000\" />\r\n      <workItem from=\"1705836803038\" duration=\"62000\" />\r\n      <workItem from=\"1705846053558\" duration=\"24000\" />\r\n      <workItem from=\"1705846174312\" duration=\"1071000\" />\r\n      <workItem from=\"1707154181057\" duration=\"97000\" />\r\n      <workItem from=\"1707512050450\" duration=\"240000\" />\r\n      <workItem from=\"1707512393173\" duration=\"1000\" />\r\n      <workItem from=\"1708542414480\" duration=\"19000\" />\r\n      <workItem from=\"1710456065500\" duration=\"316000\" />\r\n      <workItem from=\"1710671571775\" duration=\"3000\" />\r\n      <workItem from=\"1710679120293\" duration=\"594000\" />\r\n      <workItem from=\"1711097385701\" duration=\"16000\" />\r\n      <workItem from=\"1729418548263\" duration=\"757000\" />\r\n      <workItem from=\"1729447517971\" duration=\"164000\" />\r\n      <workItem from=\"1729611090025\" duration=\"459000\" />\r\n      <workItem from=\"1729611570384\" duration=\"433000\" />\r\n      <workItem from=\"1729698548330\" duration=\"6566000\" />\r\n      <workItem from=\"1729718222520\" duration=\"2264000\" />\r\n      <workItem from=\"1731018850617\" duration=\"368000\" />\r\n      <workItem from=\"1731020772820\" duration=\"1265000\" />\r\n      <workItem from=\"1731060721730\" duration=\"387000\" />\r\n      <workItem from=\"1731400169644\" duration=\"674000\" />\r\n      <workItem from=\"1731482295596\" duration=\"620000\" />\r\n      <workItem from=\"1731759042596\" duration=\"10000\" />\r\n      <workItem from=\"1732993857979\" duration=\"584000\" />\r\n      <workItem from=\"1732996758842\" duration=\"15000\" />\r\n      <workItem from=\"1735162156901\" duration=\"191000\" />\r\n      <workItem from=\"1735165584361\" duration=\"33000\" />\r\n      <workItem from=\"1735377306957\" duration=\"12316000\" />\r\n      <workItem from=\"1735430173760\" duration=\"467000\" />\r\n      <workItem from=\"1735485100919\" duration=\"7942000\" />\r\n      <workItem from=\"1735503686616\" duration=\"818000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Update\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1705438097228</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1705438097228</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Update\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1705438100979</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1705438100979</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Update\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1705439943333</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1705439943333</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Update\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1705439946582</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1705439946582</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Update\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1705524681351</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1705524681351</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Update after Static Testing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729704200199</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729704200199</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Update after Static Testing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729704206624</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729704206624</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Update after Static Testing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729706072931</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729706072931</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Update after Static Testing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729706721532</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729706721532</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Update after Static Testing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729706726806</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729706726806</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Update after Static Testing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729718537230</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729718537230</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Update after Static Testing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731021138319</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731021138319</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Update after Static Testing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731060752702</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731060752702</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Update after Static Testing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731060772300</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731060772300</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"15\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Update\" />\r\n    <MESSAGE value=\"Update after Static Testing\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Update after Static Testing\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/BookStore_Software_Testing$ManagingBooksControllerTest_checkIsbnStatement.ic\" NAME=\"ManagingBooksControllerTest.checkIsbnStatement Coverage Results\" MODIFIED=\"1735488685940\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"true\">\r\n      <FILTER>controller.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ad9a9d4bd551f89df48f55b22ca35958476ccbc0)
++++ b/.idea/workspace.xml	(date 1735735767017)
+@@ -5,7 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
+-      <change afterPath="$PROJECT_DIR$/test/dao/daoTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -52,52 +52,53 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.BookStore.executor": "Run",
+-    "Application.Unnamed.executor": "Run",
+-    "Downloaded.Files.Path.Enabled": "false",
+-    "JUnit.BillCreatorControllerTest (1).executor": "Run",
+-    "JUnit.BillCreatorControllerTest.checkQuantity.executor": "Run",
+-    "JUnit.BillCreatorControllerTest.checkQuantityECT (1).executor": "Run",
+-    "JUnit.BillCreatorControllerTest.checkQuantityECT.executor": "Run",
+-    "JUnit.BillCreatorControllerTest.checkQuantityStatement.executor": "Run",
+-    "JUnit.BillCreatorControllerTest.executor": "Run",
+-    "JUnit.LoadFromFileImplementationTest.executor": "Run",
+-    "JUnit.ManagingBooksControllerTest.checkIsbn.executor": "Run",
+-    "JUnit.ManagingBooksControllerTest.checkIsbnBranch (1).executor": "Run",
+-    "JUnit.ManagingBooksControllerTest.checkIsbnBranch.executor": "Run",
+-    "JUnit.ManagingBooksControllerTest.checkIsbnCondition.executor": "Run",
+-    "JUnit.ManagingBooksControllerTest.checkIsbnECT.executor": "Run",
+-    "JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1).executor": "Run",
+-    "JUnit.ManagingBooksControllerTest.checkIsbnMCDC.executor": "Run",
+-    "JUnit.ManagingBooksControllerTest.checkIsbnStatement.executor": "Coverage",
+-    "JUnit.ManagingBooksControllerTest.executor": "Run",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "false",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+-    "git-widget-placeholder": "master",
+-    "ignore.virus.scanning.warn.message": "true",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/User/Softwares/objenesis-3.2.jar",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15475024",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "preferences.pathVariables",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.BookStore.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;JUnit.BillCreatorControllerTest (1).executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.BillCreatorControllerTest.checkQuantity.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.BillCreatorControllerTest.checkQuantityECT (1).executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.BillCreatorControllerTest.checkQuantityECT.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.BillCreatorControllerTest.checkQuantityStatement.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.BillCreatorControllerTest.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.LoadFromFileImplementationTest.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ManagingAuthorsControllerTest.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ManagingBooksControllerTest.checkIsbn.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ManagingBooksControllerTest.checkIsbnBranch (1).executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ManagingBooksControllerTest.checkIsbnBranch.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ManagingBooksControllerTest.checkIsbnCondition.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ManagingBooksControllerTest.checkIsbnECT.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1).executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ManagingBooksControllerTest.checkIsbnMCDC.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ManagingBooksControllerTest.checkIsbnStatement.executor&quot;: &quot;Coverage&quot;,
++    &quot;JUnit.ManagingBooksControllerTest.executor&quot;: &quot;Run&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
++    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Softwares/objenesis-3.2.jar&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15475024&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\User\IdeaProjects\BookStore" />
+@@ -107,9 +108,10 @@
+     </key>
+     <key name="CreateTestDialog.RecentsKey">
+       <recent name="controller" />
++      <recent name="dao" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="JUnit.LoadFromFileImplementationTest">
++  <component name="RunManager" selected="JUnit.ManagingAuthorsControllerTest">
+     <configuration name="BookStore" type="Application" factoryName="Application">
+       <option name="MAIN_CLASS_NAME" value="main.Main" />
+       <module name="BookStore_Ilian_Janopullo" />
+@@ -133,7 +135,7 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="ManagingBooksControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="ManagingAuthorsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="BookStore_Ilian_Janopullo" />
+       <extension name="coverage">
+         <pattern>
+@@ -142,13 +144,13 @@
+         </pattern>
+       </extension>
+       <option name="PACKAGE_NAME" value="controller" />
+-      <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
++      <option name="MAIN_CLASS_NAME" value="controller.ManagingAuthorsControllerTest" />
+       <option name="TEST_OBJECT" value="class" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="ManagingBooksControllerTest.checkIsbnCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="ManagingBooksControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="BookStore_Ilian_Janopullo" />
+       <extension name="coverage">
+         <pattern>
+@@ -158,13 +160,12 @@
+       </extension>
+       <option name="PACKAGE_NAME" value="controller" />
+       <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
+-      <option name="METHOD_NAME" value="checkIsbnCondition(java.lang.String,boolean)" />
+-      <option name="TEST_OBJECT" value="method" />
++      <option name="TEST_OBJECT" value="class" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="ManagingBooksControllerTest.checkIsbnMCDC (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="ManagingBooksControllerTest.checkIsbnCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="BookStore_Ilian_Janopullo" />
+       <extension name="coverage">
+         <pattern>
+@@ -174,13 +175,13 @@
+       </extension>
+       <option name="PACKAGE_NAME" value="controller" />
+       <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
+-      <option name="METHOD_NAME" value="checkIsbnMCDC(java.lang.String,boolean)" />
++      <option name="METHOD_NAME" value="checkIsbnCondition(java.lang.String,boolean)" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="ManagingBooksControllerTest.checkIsbnMCDC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="ManagingBooksControllerTest.checkIsbnMCDC (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="BookStore_Ilian_Janopullo" />
+       <extension name="coverage">
+         <pattern>
+@@ -190,7 +191,7 @@
+       </extension>
+       <option name="PACKAGE_NAME" value="controller" />
+       <option name="MAIN_CLASS_NAME" value="controller.ManagingBooksControllerTest" />
+-      <option name="METHOD_NAME" value="checkIsbnMCDC(boolean,boolean,boolean,boolean)" />
++      <option name="METHOD_NAME" value="checkIsbnMCDC(java.lang.String,boolean)" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -199,18 +200,18 @@
+     <list>
+       <item itemvalue="Application.BookStore" />
+       <item itemvalue="JUnit.LoadFromFileImplementationTest" />
++      <item itemvalue="JUnit.ManagingAuthorsControllerTest" />
+       <item itemvalue="JUnit.ManagingBooksControllerTest" />
+       <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnCondition" />
+-      <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC" />
+       <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1)" />
+     </list>
+     <recent_temporary>
+       <list>
++        <item itemvalue="JUnit.ManagingAuthorsControllerTest" />
+         <item itemvalue="JUnit.LoadFromFileImplementationTest" />
+         <item itemvalue="JUnit.ManagingBooksControllerTest" />
+         <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1)" />
+         <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnCondition" />
+-        <item itemvalue="JUnit.ManagingBooksControllerTest.checkIsbnMCDC" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -273,7 +274,9 @@
+       <workItem from="1735377306957" duration="12316000" />
+       <workItem from="1735430173760" duration="467000" />
+       <workItem from="1735485100919" duration="7942000" />
+-      <workItem from="1735503686616" duration="818000" />
++      <workItem from="1735503686616" duration="3810000" />
++      <workItem from="1735548691086" duration="6000" />
++      <workItem from="1735734135636" duration="620000" />
+     </task>
+     <task id="LOCAL-00001" summary="Update">
+       <option name="closed" value="true" />
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"InspectionProjectProfileManager\">\r\n  <profile version=\"1.0\">\r\n    <option name=\"myName\" value=\"Project Default\" />\r\n    <inspection_tool class=\"CommentedOutCode\" enabled=\"true\" level=\"WEAK WARNING\" enabled_by_default=\"true\">\r\n      <option name=\"minLines\" value=\"4\" />\r\n    </inspection_tool>\r\n    <inspection_tool class=\"DuplicatedCode\" enabled=\"true\" level=\"WEAK WARNING\" enabled_by_default=\"true\">\r\n      <Languages>\r\n        <language minSize=\"371\" name=\"Java\" />\r\n      </Languages>\r\n    </inspection_tool>\r\n    <inspection_tool class=\"ExtractMethodRecommender\" enabled=\"true\" level=\"WARNING\" enabled_by_default=\"true\">\r\n      <option name=\"minLength\" value=\"594\" />\r\n    </inspection_tool>\r\n    <inspection_tool class=\"InfiniteLoopStatement\" enabled=\"false\" level=\"WARNING\" enabled_by_default=\"false\" />\r\n    <inspection_tool class=\"MagicConstant\" enabled=\"false\" level=\"WARNING\" enabled_by_default=\"false\" />\r\n    <inspection_tool class=\"RawUseOfParameterizedType\" enabled=\"false\" level=\"WARNING\" enabled_by_default=\"false\" />\r\n    <inspection_tool class=\"UNCHECKED_WARNING\" enabled=\"false\" level=\"WARNING\" enabled_by_default=\"false\" />\r\n    <inspection_tool class=\"unused\" enabled=\"false\" level=\"WARNING\" enabled_by_default=\"false\" checkParameterExcludingHierarchy=\"false\">\r\n      <option name=\"LOCAL_VARIABLE\" value=\"true\" />\r\n      <option name=\"FIELD\" value=\"true\" />\r\n      <option name=\"METHOD\" value=\"true\" />\r\n      <option name=\"CLASS\" value=\"true\" />\r\n      <option name=\"PARAMETER\" value=\"true\" />\r\n      <option name=\"REPORT_PARAMETER_FOR_PUBLIC_METHODS\" value=\"true\" />\r\n      <option name=\"ADD_MAINS_TO_ENTRIES\" value=\"true\" />\r\n      <option name=\"ADD_APPLET_TO_ENTRIES\" value=\"true\" />\r\n      <option name=\"ADD_SERVLET_TO_ENTRIES\" value=\"true\" />\r\n      <option name=\"ADD_NONJAVA_TO_ENTRIES\" value=\"true\" />\r\n    </inspection_tool>\r\n  </profile>\r\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+--- a/.idea/inspectionProfiles/Project_Default.xml	(revision ad9a9d4bd551f89df48f55b22ca35958476ccbc0)
++++ b/.idea/inspectionProfiles/Project_Default.xml	(date 1735505382757)
+@@ -1,6 +1,9 @@
+ <component name="InspectionProjectProfileManager">
+   <profile version="1.0">
+     <option name="myName" value="Project Default" />
++    <inspection_tool class="AutoCloseableResource" enabled="true" level="WARNING" enabled_by_default="true">
++      <option name="METHOD_MATCHER_CONFIG" value="java.util.Formatter,format,java.io.Writer,append,com.google.common.base.Preconditions,checkNotNull,org.hibernate.Session,close,java.io.PrintWriter,printf,java.io.PrintStream,printf,java.lang.foreign.Arena,ofAuto,java.lang.foreign.Arena,global,org.mockito.MockitoAnnotations,openMocks" />
++    </inspection_tool>
+     <inspection_tool class="CommentedOutCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+       <option name="minLines" value="4" />
+     </inspection_tool>

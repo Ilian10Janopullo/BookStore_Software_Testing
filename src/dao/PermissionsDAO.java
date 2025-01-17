@@ -6,7 +6,7 @@ import java.io.*;
 
 
 public class PermissionsDAO {
-    public static final String FILE_PATH = "database/permissions.dat";
+    public static String FILE_PATH = "database/permissions.dat";
     private static final File DATA_FILE = new File(FILE_PATH);
     private final ObservableList<String> permissionsCombo = FXCollections.observableArrayList();
 
