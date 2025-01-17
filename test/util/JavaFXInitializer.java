@@ -1,15 +1,16 @@
 package util;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.stage.Stage;
 
 public class JavaFXInitializer extends Application {
 
-    private static boolean initialized = false;
+    private static volatile boolean initialized = false;
 
     @Override
     public void start(Stage primaryStage) {
-        // No GUI required; this method ensures JavaFX toolkit is initialized
+        // This method is required to start the JavaFX Application Thread.
     }
 
     public synchronized void init() {
@@ -21,19 +22,31 @@ public class JavaFXInitializer extends Application {
 
         Thread fxThread = new Thread(() -> {
             try {
+                // Start the JavaFX runtime
                 Application.launch(JavaFXInitializer.class);
             } catch (IllegalStateException e) {
-                // JavaFX is already initialized, ignore the exception
+                // JavaFX is already initialized; this exception is expected.
             }
         });
-        fxThread.setDaemon(true); // Ensure it doesn't block JVM shutdown
+        fxThread.setDaemon(true); // Ensure the thread does not block JVM shutdown
         fxThread.start();
 
-        // Give JavaFX runtime some time to initialize
+        // Allow some time for JavaFX to initialize
+        waitForInitialization();
+    }
+
+    public static boolean isInitialized() {
+        return initialized;
+    }
+
+    private static void waitForInitialization() {
+        // Wait for JavaFX Toolkit to be initialized
         try {
-            Thread.sleep(1000);
+            while (!Platform.isFxApplicationThread()) {
+                Thread.sleep(10);
+            }
         } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+            Thread.currentThread().interrupt(); // Restore interrupted state
         }
     }
 }

@@ -84,6 +84,9 @@ public class AdminMenuController {
         this.view.getControlPermissions().setOnAction(e->ControlPermissions());
     }
 
+    public static void setBooks(ObservableList<Book> booksList) {
+        books = booksList;
+    }
 
     public AdminMenuView getView() {
         return view;
