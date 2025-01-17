@@ -5,7 +5,7 @@ import javafx.stage.Stage;
 import model.UsersOfTheSystem;
 
 public class BackFunctionMenu {
-    static void mainMenuBack(int i, ObservableList<String> permissionsCombo, Stage stage, UsersOfTheSystem user) {
+    public static void mainMenuBack(int i, ObservableList<String> permissionsCombo, Stage stage, UsersOfTheSystem user) {
         if (permissionsCombo.get(i).equals("PermissionCombo1Controller")) {
             PermissionCombo1Controller controller = new PermissionCombo1Controller(stage, user, true);
             stage.getScene().setRoot(controller.getView());
