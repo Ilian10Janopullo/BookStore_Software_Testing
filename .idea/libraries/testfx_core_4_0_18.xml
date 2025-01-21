@@ -1,7 +1,9 @@
 <component name="libraryTable">
   <library name="testfx-core-4.0.18">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Softwares/testfx-core-4.0.18.jar!/" />
+      <root url="jar://$USER_HOME$/Softwares/TestFX/testfx-core-4.0.18.jar!/" />
+      <root url="jar://$USER_HOME$/Softwares/TestFX/testfx-junit5-4.0.18.jar!/" />
+      <root url="jar://$USER_HOME$/Softwares/TestFX/assertj-core-3.24.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -14,6 +14,7 @@ public class LoginView extends GridPane {
     private final PasswordField enterPassword = new PasswordField();
     private final Button enter = new Button("");
 
+
     public LoginView() {
         this.setHgap(10);
         this.setVgap(10);
@@ -31,6 +32,10 @@ public class LoginView extends GridPane {
         backIcon.setFitWidth(30);
         enter.setGraphic(backIcon);
         enter.setContentDisplay(ContentDisplay.RIGHT);
+
+        enterUserName.setId("enterUserName");
+        enterPassword.setId("enterPassword");
+        enter.setId("enterBtn");
 
         Label userName = new Label("Username : ");
         this.add(userName, 0, 0);
