@@ -34,6 +34,10 @@ public class TableViewCheckingUsers extends BorderPane {
 
     public TableViewCheckingUsers() {
 
+        returnButton.setId("returnButton");
+        resetBtn.setId("resetButton");
+        searchBarTf.setId("searchBarTextField");
+
         tableView.setEditable(false);
 
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);

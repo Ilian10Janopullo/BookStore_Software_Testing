@@ -80,6 +80,26 @@ public class TableManagingUsersView extends BorderPane {
     private final Button returnButton = new Button("");
 
     public TableManagingUsersView() {
+
+        firstNameTF.setId("firstNameTextField");
+        lastNameTF.setId("lastNameTextField");
+        middleNameTF.setId("middleNameTextField");
+        gender.setId("genderComboBox");
+        role.setId("roleComboBox");
+        birthDateDayTf.setId("birthDateDayTextField");
+        birthDateMonthTf.setId("birthDateMonthTextField");
+        birthDateYearTf.setId("birthDateYearTextField");
+        userNameTf.setId("usernameTextField");
+        passwordTf.setId("passwordTextField");
+        emailTf.setId("emailTextField");
+        phoneNoTf.setId("phoneNumberTextField");
+        salaryTf.setId("salaryTextField");
+        searchBarTf.setId("searchBarTextField");
+        submitBtn.setId("submitButton");
+        btnDelete.setId("deleteButton");
+        btnUpdate.setId("updateButton");
+        returnButton.setId("returnButton");
+
         tableView.setEditable(true);
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 

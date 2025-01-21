@@ -66,6 +66,22 @@ public class TableViewManagingBooks extends BorderPane {
 
 
     public TableViewManagingBooks() {
+
+        titleTF.setId("titleTextField");
+        isbnTF.setId("isbnTextField");
+        priceTF.setId("priceTextField");
+        quantityTf.setId("quantityTextField");
+        descriptionTA.setId("descriptionTextArea");
+        authorComboBox.setId("authorComboBox");
+        checkComboBox.setId("genreCheckComboBox");
+        rbPaperback.setId("paperbackRadioButton");
+        rbEbook.setId("ebookRadioButton");
+        searchBarTf.setId("searchBarTextField");
+        submitBtn.setId("submitButton");
+        btnDelete.setId("deleteButton");
+        btnUpdate.setId("updateButton");
+        returnButton.setId("returnButton");
+
         authorsDAO = new AuthorsDAO();
         tableView.setEditable(true);
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);

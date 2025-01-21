@@ -42,6 +42,17 @@ public class TableViewManagingAuthors extends BorderPane {
     private final Button returnButton = new Button("");
 
     public TableViewManagingAuthors() {
+
+        firstNameTF.setId("firstNameTextField");
+        lastNameTF.setId("lastNameTextField");
+        middleNameTF.setId("middleNameTextField");
+        gender.setId("genderComboBox");
+        searchBarTf.setId("searchBarTextField");
+        submitBtn.setId("submitButton");
+        btnDelete.setId("deleteButton");
+        btnUpdate.setId("updateButton");
+        returnButton.setId("returnButton");
+
         tableView.setEditable(true);
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 

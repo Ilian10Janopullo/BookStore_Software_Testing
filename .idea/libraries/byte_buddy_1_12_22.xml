@@ -1,11 +1,13 @@
 <component name="libraryTable">
   <library name="byte-buddy-1.12.22">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Softwares/Mockito Libs/byte-buddy-1.12.22.jar!/" />
-      <root url="jar://$USER_HOME$/Softwares/Mockito Libs/byte-buddy-agent-1.12.22.jar!/" />
-      <root url="jar://$USER_HOME$/Softwares/Mockito Libs/mockito-core-4.11.0.jar!/" />
-      <root url="jar://$USER_HOME$/Softwares/Mockito Libs/mockito-junit-jupiter-4.11.0.jar!/" />
-      <root url="jar://$USER_HOME$/Softwares/Mockito Libs/objenesis-3.2.jar!/" />
+      <root url="jar://$USER_HOME$/Softwares/byte-buddy-1.12.22.jar!/" />
+      <root url="jar://$USER_HOME$/Softwares/byte-buddy-agent-1.12.22.jar!/" />
+      <root url="jar://$USER_HOME$/Softwares/mockito-core-4.11.0.jar!/" />
+      <root url="jar://$USER_HOME$/Softwares/mockito-junit-jupiter-4.11.0.jar!/" />
+      <root url="jar://$USER_HOME$/Softwares/objenesis-3.2.jar!/" />
+      <root url="jar://$USER_HOME$/Softwares/testfx-core-4.0.18.jar!/" />
+      <root url="jar://$USER_HOME$/Softwares/testfx-junit5-4.0.18.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
