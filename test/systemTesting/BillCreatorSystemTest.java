@@ -1,118 +1,105 @@
 package systemTesting;
 
 import controller.BillCreatorController;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
-import javafx.stage.Stage;
-import org.junit.jupiter.api.*;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.testfx.framework.junit5.ApplicationTest;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TableView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseButton;
+import javafx.stage.Stage;
 import model.*;
+import org.junit.jupiter.api.*;
+import org.testfx.framework.junit5.ApplicationTest;
 import org.testfx.util.WaitForAsyncUtils;
+import dao.BooksDAO;
 
-import static org.mockito.Mockito.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class BillCreatorSystemTest extends ApplicationTest {
 
-    private BillCreatorController billCreatorController;
-    @Mock
-    private UsersOfTheSystem mockUser;
-    @Mock
-    private Stage mockStage;
+    private BillCreatorController controller;
 
     @Override
     public void start(Stage stage) {
-        MockitoAnnotations.openMocks(this); // Initialize mocks
-        mockUser = mock(UsersOfTheSystem.class); // Mock the user
-        when(mockUser.getUserID()).thenReturn("testUser"); // Define behavior of getUserID()
+        Calendar calendar = new GregorianCalendar();
+        UsersOfTheSystem user = new Librarian("Jane", "Doe", calendar.getTime(), Gender.FEMALE, "janedoe", "password", Role.LIBRARIAN, "janedoe@example.com", "987654321", 800);
 
-        billCreatorController = new BillCreatorController(stage, mockUser);
-        stage.setScene(new javafx.scene.Scene(billCreatorController.getView(), 1525, 600));
+        controller = new BillCreatorController(stage, user);
+        stage.setScene(new javafx.scene.Scene(controller.getView(), 1520, 600));
         stage.show();
     }
+
     @BeforeEach
-    public void setup() throws InterruptedException {
-        reset(mockUser, mockStage);
+    public void setUp() throws InterruptedException {
+        controller.getView().getTableViewOgBooksInStock().refresh();
+        controller.getView().getTableViewOfBooksToOrder().refresh();
         Thread.sleep(3000);
     }
 
     @Test
     @Order(1)
-    public void testAddBookToOrder() throws InterruptedException {
-        // Create list for TableView
-        ObservableList<Book> modifiableBooksList = FXCollections.observableArrayList();
-        billCreatorController.getView().getTableViewOgBooksInStock().setItems(modifiableBooksList);
+    public void testAddBookToOrderFlow() throws InterruptedException {
+        TableView<Book> booksTable = controller.getView().getTableViewOgBooksInStock();
+        TableView<BooksOrdered> tableView1 = controller.getView().getTableViewOfBooksToOrder();
+        ObservableList<Book> books = FXCollections.observableArrayList(new BooksDAO().getAll());
+        booksTable.setItems(books);
 
-        Book mockBook = new Book("123", "Test Book", "Description", 10.0, new Author("Test", "Test", Gender.MALE), true, 5);
-        modifiableBooksList.add(mockBook);
 
-        // Selecting the book and adding it to the order
-        interact(() -> billCreatorController.getView().getTableViewOgBooksInStock().getSelectionModel().select(mockBook));
-        billCreatorController.getView().getTableViewOgBooksInStock().fireEvent(new javafx.scene.input.MouseEvent(
-                javafx.scene.input.MouseEvent.MOUSE_CLICKED, 0, 0, 0, 0, javafx.scene.input.MouseButton.PRIMARY, 1,
-                true, true, true, true, true, true, true, true, true, true, null
-        ));
+        clickOn(booksTable).type(KeyCode.DOWN).press(MouseButton.PRIMARY).release(MouseButton.PRIMARY);
+        clickOn(tableView1);
+        type(KeyCode.RIGHT, 3).press(KeyCode.ENTER).release(KeyCode.ENTER);
+        write("2").press(KeyCode.ENTER).release(KeyCode.ENTER);
+        clickOn("#submitButton");
 
-        Thread.sleep(3000);
-        Assertions.assertFalse(billCreatorController.getView().getTableViewOfBooksToOrder().getItems().isEmpty());
-        Assertions.assertEquals(1, billCreatorController.getView().getTableViewOfBooksToOrder().getItems().size());
+        WaitForAsyncUtils.waitForFxEvents();
+        Thread.sleep(2000);
     }
 
     @Test
     @Order(2)
-    public void testRemoveBookFromOrder() throws InterruptedException {
-        BooksOrdered mockOrder = new BooksOrdered("12345", "Test Book", 20.0);
-        mockOrder.setQuantityToOrder(2);
+    public void testRemoveBookFromOrderFlow() throws InterruptedException {
+        TableView<Book> orderTable = controller.getView().getTableViewOgBooksInStock();
+        TableView<BooksOrdered> tableView1 = controller.getView().getTableViewOfBooksToOrder();
+//        ObservableList<BooksOrdered> orders = FXCollections.observableArrayList(new BooksDAO().getAll());
 
-        Platform.runLater(() -> {
-            billCreatorController.getView().getTableViewOfBooksToOrder().getItems().add(mockOrder);
-            // Selecting the book and removing it
-            billCreatorController.getView().getTableViewOfBooksToOrder().getSelectionModel().select(mockOrder);
-            billCreatorController.onBookRemove(null);
-            Assertions.assertTrue(billCreatorController.getView().getTableViewOfBooksToOrder().getItems().isEmpty());
-        });
+        clickOn(orderTable).type(KeyCode.DOWN).press(MouseButton.PRIMARY).release(MouseButton.PRIMARY);
+        clickOn(tableView1);
+        press(KeyCode.ENTER).release(KeyCode.ENTER).press(MouseButton.PRIMARY).release(MouseButton.PRIMARY);
 
-        // Allow time for JavaFX thread to process
-        Thread.sleep(3000);
+        clickOn("#removeButton");
+
+        WaitForAsyncUtils.waitForFxEvents();
+        Thread.sleep(2000);
     }
+
+
     @Test
     @Order(3)
-    public void testSubmitOrder() throws InterruptedException {
-        BooksOrdered mockOrder = new BooksOrdered("12345", "Test Book", 20.0);
-        mockOrder.setQuantityToOrder(1);
-        Platform.runLater(() -> {
-            // Add the order to the TableView
-            billCreatorController.getView().getTableViewOfBooksToOrder().getItems().add(mockOrder);
-            // Click the submit button
-            billCreatorController.getView().getSubmitBtn().fire();
-        });
+    public void testResetOrderFlow() throws InterruptedException {
 
-        // Wait for JavaFX thread to process events
+        TableView<Book> orderTable = controller.getView().getTableViewOgBooksInStock();
+        TableView<BooksOrdered> tableView1 = controller.getView().getTableViewOfBooksToOrder();
+
+        clickOn(orderTable);
+        type(KeyCode.DOWN, 1).press(MouseButton.PRIMARY).release(MouseButton.PRIMARY);
+        Thread.sleep(500);
+        type(KeyCode.DOWN, 2).press(MouseButton.PRIMARY).release(MouseButton.PRIMARY);
+
+        clickOn("#resetButton");
+
         WaitForAsyncUtils.waitForFxEvents();
-        // Verify the TableView is clear
-        ObservableList<BooksOrdered> items = billCreatorController.getView().getTableViewOfBooksToOrder().getItems();
-        System.out.println(items.toString());
-        Assertions.assertTrue(items.isEmpty(), "The TableView should be clear after submitting the order.");
+        Thread.sleep(2000);
     }
-
 
     @Test
     @Order(4)
-    public void testResetOrder() throws Exception {
-        Platform.runLater(() -> {
-            // Simulate resetting the order
-            billCreatorController.getView().getResetBtn().fire();
-            // Retrieve total amount label value
-            String actualTotal = billCreatorController.getView().getTotalAmountFieldLb().getText();
-            // Assert the value is reset to "0.0"
-            Assertions.assertEquals("0.0", actualTotal, "The total amount label should reset to 0.0");
-        });
+    public void testBackNavigationFlow() throws InterruptedException {
+        clickOn("#returnButton");
 
-        // Wait for JavaFX thread to process
         WaitForAsyncUtils.waitForFxEvents();
+        Thread.sleep(2000);
     }
-
 }

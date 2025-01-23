@@ -111,6 +111,11 @@
             tableViewOgBooksInStock.getColumns().addAll(titleColumnOfBooksInStock, isbnColumnOfBooksInStock, descriptionColumnOfBooksInStock, genreColumnOfBooksInStock, authorColumnOfBooksInStock, paperbackColumnOfBooksInStock, priceColumnOfBooksInStock, quantityColumnOfBooksInStock);
             tableViewOfBooksToOrder.getColumns().addAll(titleOfOrderedBooksColumn, isbnOfOrderedBooksColumn, priceOfOrderedBooksColumn, quantityToOrderColumn);
 
+            returnButton.setId("returnButton");
+            resetBtn.setId("resetButton");
+            btnRemove.setId("removeButton");
+            submitBtn.setId("submitButton");
+
             returnButton.setPrefWidth(80);
             resetBtn.setPrefWidth(80);
             btnRemove.setPrefWidth(80);
