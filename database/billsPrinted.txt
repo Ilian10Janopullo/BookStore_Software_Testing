@@ -25,9 +25,9 @@ Total : 10.0
 Bill ID : d57853d8-39ee-4a84-a876-9c980eeb6462
 User ID : c8f29c82-3256-4083-a4e9-ee7a98a1c3cd
 Date/Time : Tue Jan 16 22:16:58 CET 2024
-Book : Keshtjella	 Price : 10.0	 Quantity : 1
+Book : Keshtjella	 Price : 10.0	 Quantity : 3
 Book : Bageti e Bujqesi	 Price : 12.0	 Quantity : 1
-Total : 22.0
+Total : 42.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Bill ID : 9e342d59-3a63-46c0-a171-7cee4597ef16
 User ID : c8f29c82-3256-4083-a4e9-ee7a98a1c3cd
