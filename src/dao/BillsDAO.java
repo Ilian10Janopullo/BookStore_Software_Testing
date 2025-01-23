@@ -7,7 +7,7 @@ import java.io.*;
 
 
 public class BillsDAO implements dao {
-    public static final String FILE_PATH = "database/bills.dat";
+    public static String FILE_PATH = "database/bills.dat";
     private static final File DATA_FILE = new File(FILE_PATH);
     private final ObservableList<Bill> bills = FXCollections.observableArrayList();
 

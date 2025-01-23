@@ -93,3 +93,17 @@ Date/Time : Thu Jan 23 15:26:15 CET 2025
 Book : Bageti e Bujqesi	 Price : 12.0	 Quantity : 2
 Total : 24.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bill ID : 5d857161-d28b-4a0a-b001-bb56fb6ef503
+User ID : 7095fa90-8c68-470b-9f9d-e19fc0b617ae
+Date/Time : Fri Jan 24 00:20:36 CET 2025
+Book : Book 1	 Price : 20.0	 Quantity : 1
+Book : Book 2	 Price : 15.0	 Quantity : 1
+Total : 35.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bill ID : 8a684a85-d2a6-46d1-abaa-a19c59e28aef
+User ID : b3bf5b2f-dda8-425f-9589-b032b8e9c69c
+Date/Time : Fri Jan 24 00:21:19 CET 2025
+Book : Book 1	 Price : 20.0	 Quantity : 1
+Book : Book 2	 Price : 15.0	 Quantity : 1
+Total : 35.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

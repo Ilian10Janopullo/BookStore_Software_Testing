@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.List;
 
 public class BooksDAO implements dao {
-    public static final String FILE_PATH = "database/books.dat";
+    public static String FILE_PATH = "database/books.dat";
     private static final File DATA_FILE = new File(FILE_PATH);
     private final ObservableList<Book> books = FXCollections.observableArrayList();
 

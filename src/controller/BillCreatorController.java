@@ -13,6 +13,7 @@ import view.BillCreatorView;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.Function;
 
 public class BillCreatorController {
     private static ObservableList<String> permissionsCombo;
@@ -25,7 +26,7 @@ public class BillCreatorController {
     private final AuthorsDAO authorsDAO;
     private final UsersDAO usersDAO;
     private final ObservableList<Author> authors;
-
+    private static Function<Alert.AlertType, Alert> alertFactory = Alert::new;
     private final ObservableList<Book> books;
     private final ObservableList<Bill> bill;
     private final UsersOfTheSystem user;
@@ -59,12 +60,16 @@ public class BillCreatorController {
         setEditListeners();
     }
 
+    public void setAlertFactory(Function<Alert.AlertType, Alert> alertFactory) {
+        BillCreatorController.alertFactory = alertFactory;
+    }
+
 
     public static boolean checkQuantity(int quantity, Book book) {
         try {
             if (quantity <= 0 || quantity > book.getQuantity()) {
                 Alert alertForQuantity;
-                alertForQuantity = new Alert(Alert.AlertType.ERROR);
+                alertForQuantity = alertFactory.apply(Alert.AlertType.ERROR);
                 alertForQuantity.setContentText("Quantity error!");
                 alertForQuantity.setTitle("Check the quantity of the book!");
                 alertForQuantity.show();
@@ -208,7 +213,7 @@ public class BillCreatorController {
                 boolean res = billsDAO.addToFile(billToProceed);
                 if (!res) {
                     Alert alert;
-                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert = alertFactory.apply(Alert.AlertType.ERROR);
                     alert.setContentText("Book registering failed!");
                     alert.setTitle("Registering result!");
                     alert.show();
@@ -261,6 +266,10 @@ public class BillCreatorController {
         } else {
             backFunction(1);
         }
+    }
+
+    public void setOrders(ObservableList<BooksOrdered> orders) {
+        this.orders = orders;
     }
 
     private void backFunction(int i){

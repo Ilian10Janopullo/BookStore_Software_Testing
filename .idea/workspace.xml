@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
+      <change afterPath="$PROJECT_DIR$/test/integrationTesting/BillCreatorControllerTestReview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookStore_Ilian_Janopullo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookStore_Ilian_Janopullo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/authors.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/authors.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/bills.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/bills.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/billsPrinted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/database/billsPrinted.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/books.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/books.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/users.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/integrationTesting/BackFunctionMenuTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/unitTesting/controller/BillCreatorControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/unitTesting/controller/BillCreatorControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/unitTesting/controller/LoginControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/unitTesting/controller/LoginControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/unitTesting/controller/ManageBillsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/unitTesting/controller/ManageBillsControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/unitTesting/controller/ManagerUsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/unitTesting/controller/ManagerUsersControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/unitTesting/controller/ManagingBooksControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/unitTesting/controller/ManagingBooksControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/BillCreatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BillCreatorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BillsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BillsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BooksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BooksDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UsersDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +85,10 @@
     "JUnit.BillCreatorControllerTest.checkQuantityECT.executor": "Run",
     "JUnit.BillCreatorControllerTest.checkQuantityStatement.executor": "Run",
     "JUnit.BillCreatorControllerTest.executor": "Run",
+    "JUnit.BillCreatorControllerTestReview.executor": "Debug",
+    "JUnit.BillCreatorControllerTestReview.submitDuplicateBill.executor": "Run",
+    "JUnit.BillCreatorControllerTestReview.submitInvalidReview.executor": "Run",
+    "JUnit.BillCreatorControllerTestReview.submitValidBill.executor": "Run",
     "JUnit.BillCreatorSystemTest.executor": "Run",
     "JUnit.BillCreatorViewTest.executor": "Run",
     "JUnit.BillPrintingDAOTest.executor": "Run",
@@ -158,7 +160,7 @@
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Softwares/assertj-core-3.24.2.jar",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/BookStore_Software_Testing/database",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -173,6 +175,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\BookStore_Software_Testing\database" />
       <recent name="C:\Users\User\IdeaProjects\BookStore" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -199,36 +202,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookStore_Ilian_Janopullo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unitTesting.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unitTesting.model" />
-      <option name="MAIN_CLASS_NAME" value="unitTesting.model.AdminTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookStore_Ilian_Janopullo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unitTesting.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unitTesting.model" />
-      <option name="MAIN_CLASS_NAME" value="unitTesting.model.AuthorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AuthorsDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookStore_Ilian_Janopullo" />
       <extension name="coverage">
@@ -244,19 +217,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillCreatorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BillCreatorControllerTestReview" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookStore_Ilian_Janopullo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="unitTesting.controller.*" />
+          <option name="PATTERN" value="integrationTesting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="unitTesting.controller" />
-      <option name="MAIN_CLASS_NAME" value="unitTesting.controller.BillCreatorControllerTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="PACKAGE_NAME" value="integrationTesting" />
+      <option name="MAIN_CLASS_NAME" value="integrationTesting.BillCreatorControllerTestReview" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\User\Softwares\javafx-sdk-23.0.1\lib --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BillCreatorControllerTestReview.submitDuplicateBill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookStore_Ilian_Janopullo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integrationTesting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integrationTesting" />
+      <option name="MAIN_CLASS_NAME" value="integrationTesting.BillCreatorControllerTestReview" />
+      <option name="METHOD_NAME" value="submitDuplicateBill" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BillCreatorControllerTestReview.submitInvalidReview" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookStore_Ilian_Janopullo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integrationTesting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integrationTesting" />
+      <option name="MAIN_CLASS_NAME" value="integrationTesting.BillCreatorControllerTestReview" />
+      <option name="METHOD_NAME" value="submitInvalidReview" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BillCreatorControllerTestReview.submitValidBill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookStore_Ilian_Janopullo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integrationTesting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integrationTesting" />
+      <option name="MAIN_CLASS_NAME" value="integrationTesting.BillCreatorControllerTestReview" />
+      <option name="METHOD_NAME" value="submitValidBill" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -274,36 +293,6 @@
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="--module-path C:\Users\User\Softwares\javafx-sdk-23.0.1\lib --add-modules javafx.controls,javafx.fxml" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BillTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookStore_Ilian_Janopullo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unitTesting.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unitTesting.model" />
-      <option name="MAIN_CLASS_NAME" value="unitTesting.model.BillTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookStore_Ilian_Janopullo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unitTesting.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unitTesting.model" />
-      <option name="MAIN_CLASS_NAME" value="unitTesting.model.ManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -334,19 +323,19 @@
       <item itemvalue="Application.BookStore" />
       <item itemvalue="JUnit.ManagingBooksControllerTest" />
       <item itemvalue="JUnit.ManagingAuthorsControllerTest" />
-      <item itemvalue="JUnit.AdminTest" />
-      <item itemvalue="JUnit.AuthorTest" />
+      <item itemvalue="JUnit.BillCreatorControllerTestReview" />
+      <item itemvalue="JUnit.BillCreatorControllerTestReview.submitDuplicateBill" />
+      <item itemvalue="JUnit.BillCreatorControllerTestReview.submitInvalidReview" />
+      <item itemvalue="JUnit.BillCreatorControllerTestReview.submitValidBill" />
       <item itemvalue="JUnit.AuthorsDAOTest" />
-      <item itemvalue="JUnit.BillTest" />
-      <item itemvalue="JUnit.ManagerTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AuthorsDAOTest" />
-        <item itemvalue="JUnit.ManagerTest" />
-        <item itemvalue="JUnit.BillTest" />
-        <item itemvalue="JUnit.AuthorTest" />
-        <item itemvalue="JUnit.AdminTest" />
+        <item itemvalue="JUnit.BillCreatorControllerTestReview.submitValidBill" />
+        <item itemvalue="JUnit.BillCreatorControllerTestReview.submitDuplicateBill" />
+        <item itemvalue="JUnit.BillCreatorControllerTestReview.submitInvalidReview" />
+        <item itemvalue="JUnit.BillCreatorControllerTestReview" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +408,8 @@
       <workItem from="1737065674313" duration="847000" />
       <workItem from="1737461895777" duration="6680000" />
       <workItem from="1737635890920" duration="1598000" />
-      <workItem from="1737643206262" duration="1382000" />
+      <workItem from="1737643206262" duration="3186000" />
+      <workItem from="1737661220326" duration="10278000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
