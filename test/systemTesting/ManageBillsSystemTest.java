@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
 import model.*;
 import org.junit.jupiter.api.*;
@@ -56,15 +57,12 @@ public class ManageBillsSystemTest extends ApplicationTest {
         TableView<BooksOrdered> tableView1 = controller.getView().getTableViewOfBooksOrdered();
         ObservableList<Bill> bills = FXCollections.observableArrayList(new BillsDAO().getAll());
 
-        clickOn(tableView);
-        type(KeyCode.DOWN, 4);
-        press(KeyCode.ENTER).release(KeyCode.ENTER);
+        clickOn(tableView).type(KeyCode.DOWN, 4).press(MouseButton.PRIMARY).release(MouseButton.PRIMARY);
 
         Thread.sleep(1500);
 
-        clickOn(tableView1).press(KeyCode.DOWN).release(KeyCode.DOWN);
-        type(KeyCode.RIGHT, 3);
-        press(KeyCode.ENTER).release(KeyCode.ENTER);
+        clickOn(tableView1);
+        type(KeyCode.RIGHT, 3).press(KeyCode.ENTER).release(KeyCode.ENTER);
         write("3").press(KeyCode.ENTER).release(KeyCode.ENTER);
 
         clickOn("#btnUpdate");
@@ -83,7 +81,7 @@ public class ManageBillsSystemTest extends ApplicationTest {
         int billIndex = bills.size()-1;
 
         clickOn(tableView);
-        type(KeyCode.DOWN, billIndex).press(KeyCode.ENTER).release(KeyCode.ENTER);
+        type(KeyCode.DOWN, billIndex).press(MouseButton.PRIMARY).release(MouseButton.PRIMARY);
 
         clickOn(tableView1).press(KeyCode.DOWN).release(KeyCode.DOWN).press(KeyCode.ENTER).release(KeyCode.ENTER);
         clickOn("#btnRemove");
