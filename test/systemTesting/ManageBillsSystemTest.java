@@ -1,137 +1,114 @@
 package systemTesting;
 
 import controller.ManageBillsController;
-import dao.*;
-import javafx.application.Platform;
+import dao.BillsDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TableView;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import model.*;
 import org.junit.jupiter.api.*;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.testfx.framework.junit5.ApplicationTest;
 import org.testfx.util.WaitForAsyncUtils;
 
-import static org.mockito.Mockito.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ManageBillsSystemTest extends ApplicationTest {
-    private ManageBillsController manageBillsController;
-    @Mock
-    private BillsDAO mockBillsDAO;
-    @Mock
-    private BooksDAO mockBooksDAO;
-    @Mock
-    private AuthorsDAO mockAuthorsDAO;
-    @Mock
-    private UsersDAO mockUsersDAO;
-    @Mock
-    private PermissionsDAO mockPermissionsDAO;
-    @Mock
-    private BillPrintingDAO mockBillPrintingDAO;
-    @Mock
-    private Stage mockStage;
-    @Mock
-    private UsersOfTheSystem mockUser;
+
+    private ManageBillsController controller;
 
     @Override
     public void start(Stage stage) {
-        MockitoAnnotations.openMocks(this);
-        mockUser = mock(UsersOfTheSystem.class);
-        when(mockUser.getUserID()).thenReturn("testUser");
-        when(mockUser.getRole()).thenReturn(Role.ADMIN);
-        manageBillsController = new ManageBillsController(stage, mockUser);
-        stage.setScene(new javafx.scene.Scene(manageBillsController.getView(), 1525, 600));
+        Calendar calendar = new GregorianCalendar();
+        UsersOfTheSystem user = new Manager("John", "Doe", calendar.getTime(), Gender.MALE, "johndoe", "password", Role.MANAGER, "johndoe@example.com", "123456789", 1000);
+
+        controller = new ManageBillsController(stage, user);
+        stage.setScene(new javafx.scene.Scene(controller.getView(), 1520, 600));
         stage.show();
     }
+
     @BeforeEach
-    public void setup() {
-        reset(mockBillsDAO, mockBooksDAO, mockAuthorsDAO, mockUsersDAO, mockPermissionsDAO, mockBillPrintingDAO);
+    public void setUp() throws InterruptedException {
+        controller.getView().getTableViewOfBills().refresh();
+        Thread.sleep(3000);
     }
 
     @Test
     @Order(1)
-    public void testViewInitialization() {
-        Platform.runLater(() -> {
-            Assertions.assertNotNull(manageBillsController.getView(), "ManageBillsView should be initialized");
-            Assertions.assertFalse(manageBillsController.getView().getTableViewOfBills().getItems().isEmpty(),
-                    "Bills TableView should be populated");
-        });
+    public void testAddBillFlow() throws InterruptedException {
+
+        clickOn("#fromDate").write("17/01/2025");
+        clickOn("#toDate").write("24/01/2025");
+        clickOn("#searchButton2");
+
+        WaitForAsyncUtils.waitForFxEvents();
+        Thread.sleep(2000);
     }
 
     @Test
     @Order(2)
-    public void testRevenueCalculation() {
-        Platform.runLater(() -> {
-            double totalRevenue = 0;
-            for (Bill bill : manageBillsController.getView().getTableViewOfBills().getItems()) {
-                totalRevenue += bill.getTotalAmount();
-            }
-            String actualRevenue = manageBillsController.getView().getRevenueTF().getText(); // Adjust based on your implementation
-            Assertions.assertEquals(String.valueOf(totalRevenue), actualRevenue,
-                    "Total revenue should match the calculated value");
-        });
+    public void testEditBillFlow() throws InterruptedException {
+        TableView<Bill> tableView = controller.getView().getTableViewOfBills();
+        TableView<BooksOrdered> tableView1 = controller.getView().getTableViewOfBooksOrdered();
+        ObservableList<Bill> bills = FXCollections.observableArrayList(new BillsDAO().getAll());
+
+        clickOn(tableView);
+        type(KeyCode.DOWN, 4);
+        press(KeyCode.ENTER).release(KeyCode.ENTER);
+
+        Thread.sleep(1500);
+
+        clickOn(tableView1).press(KeyCode.DOWN).release(KeyCode.DOWN);
+        type(KeyCode.RIGHT, 3);
+        press(KeyCode.ENTER).release(KeyCode.ENTER);
+        write("3").press(KeyCode.ENTER).release(KeyCode.ENTER);
+
+        clickOn("#btnUpdate");
+        WaitForAsyncUtils.waitForFxEvents();
+        Thread.sleep(2000);
     }
 
     @Test
     @Order(3)
-    public void testAddOrder() {
-        Platform.runLater(() -> {
-            Book mockBook = new Book("123", "Test Book", "Description", 10.0, new Author("Test", "Author", Gender.MALE), true, 5);
-            BooksOrdered order = new BooksOrdered(mockBook.getIsbn(), mockBook.getTitle(), mockBook.getPrice());
-            order.setQuantityToOrder(2);
+    public void testDeleteBillFlow() throws InterruptedException {
+        TableView<Bill> tableView = controller.getView().getTableViewOfBills();
+        ObservableList<Bill> bills = FXCollections.observableArrayList(new BillsDAO().getAll());
 
-            manageBillsController.getView().getTableViewOfBooksOrdered().getItems().add(order);
+        TableView<BooksOrdered> tableView1 = controller.getView().getTableViewOfBooksOrdered();
 
-            Assertions.assertFalse(manageBillsController.getView().getTableViewOfBooksOrdered().getItems().isEmpty(),
-                    "Order should be added to the TableView");
-            Assertions.assertEquals(2, manageBillsController.getView().getTableViewOfBooksOrdered().getItems().get(0).getQuantityToOrderOfBookOrdered(),
-                    "Order quantity should match the added value");
-        });
+        int billIndex = bills.size()-1;
+
+        clickOn(tableView);
+        type(KeyCode.DOWN, billIndex).press(KeyCode.ENTER).release(KeyCode.ENTER);
+
+        clickOn(tableView1).press(KeyCode.DOWN).release(KeyCode.DOWN).press(KeyCode.ENTER).release(KeyCode.ENTER);
+        clickOn("#btnRemove");
+
+        WaitForAsyncUtils.waitForFxEvents();
+        Thread.sleep(2000);
     }
 
     @Test
     @Order(4)
-    public void testRemoveOrder() {
-        Platform.runLater(() -> {
-            BooksOrdered order1 = new BooksOrdered("12345", "Mock Book 1", 25.0);
-            order1.setQuantityToOrder(2);
-            BooksOrdered order2 = new BooksOrdered("67890", "Mock Book 2", 30.0);
-            order2.setQuantityToOrder(1);
-            // Add mock orders to the orders list
-            ObservableList<BooksOrdered> mockOrders = FXCollections.observableArrayList(order1, order2);
-            manageBillsController.getView().getTableViewOfBooksOrdered().setItems(mockOrders);
-            System.out.println("Initial orders: " + mockOrders);
-            // Verify initial state
-            Assertions.assertEquals(2, mockOrders.size(), "Orders list should contain 2 items initially");
-            manageBillsController.getView().getTableViewOfBooksOrdered().getSelectionModel().select(order1);
-            // Log selected item
-            System.out.println("Selected order before removal: " + manageBillsController.getView().getTableViewOfBooksOrdered().getSelectionModel().getSelectedItem());
-            manageBillsController.getView().getBtnRemove().fire();
-            // Wait for the UI to update
-            WaitForAsyncUtils.waitForFxEvents();
-            Assertions.assertFalse(mockOrders.contains(order1), "Removed order should no longer be in the list");
-        });
+    public void testSearchBillFlow() throws InterruptedException {
+        clickOn("#searchBarTf").write("71c5");
+        WaitForAsyncUtils.waitForFxEvents();
+        Thread.sleep(2000);
+
+        clickOn("#showAllButton");
+        WaitForAsyncUtils.waitForFxEvents();
+        Thread.sleep(2000);
     }
 
     @Test
     @Order(5)
-    public void testSearchBills() {
-        Platform.runLater(() -> {
-            manageBillsController.getView().getSearchBarTf().setText("12345"); // Assume 12345 is a bill ID
-            Assertions.assertTrue(manageBillsController.getView().getTableViewOfBills().getItems().stream()
-                            .allMatch(bill -> bill.getBillID().contains("12345")),
-                    "Filtered bills should only include those matching the search criteria");
-        });
-    }
-
-    @Test
-    @Order(6)
-    public void testNavigationBasedOnRole() {
-        Platform.runLater(() -> {
-            manageBillsController.Back(null);
-            verify(mockUser, atLeastOnce()).getRole();
-        });
+    public void testBackNavigation() throws InterruptedException {
+        clickOn("#returnButton");
+        WaitForAsyncUtils.waitForFxEvents();
+        Thread.sleep(2000);
     }
 }

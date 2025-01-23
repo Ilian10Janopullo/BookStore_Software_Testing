@@ -47,3 +47,43 @@ Date/Time : Tue Jan 16 22:17:10 CET 2024
 Book : Keshtjella	 Price : 10.0	 Quantity : 3
 Total : 30.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bill ID : af19a0e1-ec0c-401d-9bd7-2eea3c93b77f
+User ID : 415115e3-534d-41ba-9c83-fb3d7c768071
+Date/Time : Thu Jan 23 14:03:15 CET 2025
+Book : Katedralja e Parisit	 Price : 20.99	 Quantity : 2
+Total : 41.98
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bill ID : 65bd62a4-9a5b-4980-b07b-271b198a962c
+User ID : 415115e3-534d-41ba-9c83-fb3d7c768071
+Date/Time : Thu Jan 23 14:09:00 CET 2025
+Book : Katedralja e Parisit	 Price : 20.99	 Quantity : 2
+Total : 41.98
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bill ID : f26e2471-0128-4ce9-a400-05202ffbb8d8
+User ID : 415115e3-534d-41ba-9c83-fb3d7c768071
+Date/Time : Thu Jan 23 14:09:35 CET 2025
+Book : Bageti e Bujqesi	 Price : 12.0	 Quantity : 1
+Book : Katedralja e Parisit	 Price : 20.99	 Quantity : 2
+Book : Keshtjella	 Price : 10.0	 Quantity : 1
+Total : 63.98
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bill ID : ebda33be-47dc-4374-b49e-772c08471733
+User ID : 415115e3-534d-41ba-9c83-fb3d7c768071
+Date/Time : Thu Jan 23 14:09:46 CET 2025
+Book : Katedralja e Parisit	 Price : 20.99	 Quantity : 1
+Book : Bageti e Bujqesi	 Price : 12.0	 Quantity : 1
+Total : 32.989999999999995
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bill ID : 7066e0b0-21e8-46ba-8e21-068c162661e2
+User ID : 415115e3-534d-41ba-9c83-fb3d7c768071
+Date/Time : Thu Jan 23 14:09:51 CET 2025
+Book : Keshtjella	 Price : 10.0	 Quantity : 3
+Total : 30.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bill ID : 46a10d48-aa5d-4482-bf53-a01b3d9e2cdb
+User ID : 415115e3-534d-41ba-9c83-fb3d7c768071
+Date/Time : Thu Jan 23 14:10:20 CET 2025
+Book : Keshtjella	 Price : 10.0	 Quantity : 3
+Book : Bageti e Bujqesi	 Price : 12.0	 Quantity : 1
+Total : 42.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

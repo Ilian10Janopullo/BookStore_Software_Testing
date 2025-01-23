@@ -47,43 +47,52 @@ public class ManageBillsView extends BorderPane {
 
         tableViewOfBills.setEditable(true);
         tableViewOfBills.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        tableViewOfBills.setId("tableViewOfBills");
 
         idBillColumn = new TableColumn<>("Bill ID");
         idBillColumn.setMinWidth(140);
         idBillColumn.setCellValueFactory(new PropertyValueFactory<>("billID"));
+        idBillColumn.setId("idBillColumn");
 
         idUserColumn = new TableColumn<>("Seller ID");
         idUserColumn.setMinWidth(140);
         idUserColumn.setCellValueFactory(new PropertyValueFactory<>("userID"));
+        idUserColumn.setId("idUserColumn");
 
         dateBillColumn = new TableColumn<>("Date");
         dateBillColumn.setMinWidth(140);
         dateBillColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+        dateBillColumn.setId("dateBillColumn");
 
         totalAmountColumn = new TableColumn<>("Total");
         totalAmountColumn.setMinWidth(140);
         totalAmountColumn.setCellValueFactory(new PropertyValueFactory<>("totalAmount"));
+        totalAmountColumn.setId("totalAmountColumn");
 
         tableViewOfBooksOrdered.setEditable(true);
         tableViewOfBooksOrdered.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        tableViewOfBooksOrdered.setId("tableViewOfBooksOrdered");
 
         titleOfOrderedBooksColumn = new TableColumn<>("Title");
         titleOfOrderedBooksColumn.setMinWidth(115);
         titleOfOrderedBooksColumn.setCellValueFactory(new PropertyValueFactory<>("titleOfBookOrdered"));
+        titleOfOrderedBooksColumn.setId("titleOfOrderedBooksColumn");
 
         isbnOfOrderedBooksColumn = new TableColumn<>("ISBN");
         isbnOfOrderedBooksColumn.setMinWidth(115);
         isbnOfOrderedBooksColumn.setCellValueFactory(new PropertyValueFactory<>("isbnOfBookOrdered"));
-
+        isbnOfOrderedBooksColumn.setId("isbnOfOrderedBooksColumn");
 
         priceOfOrderedBooksColumn = new TableColumn<>("Price");
         priceOfOrderedBooksColumn.setMinWidth(115);
         priceOfOrderedBooksColumn.setCellValueFactory(new PropertyValueFactory<>("priceOfBookOrdered"));
+        priceOfOrderedBooksColumn.setId("priceOfOrderedBooksColumn");
 
         quantityToOrderColumn = new TableColumn<>("Quantity Ordered");
         quantityToOrderColumn.setMinWidth(115);
         quantityToOrderColumn.setCellValueFactory(new PropertyValueFactory<>("quantityToOrderOfBookOrdered"));
         quantityToOrderColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+        quantityToOrderColumn.setId("quantityToOrderColumn");
 
 
         tableViewOfBills.getColumns().addAll(idBillColumn, idUserColumn, dateBillColumn, totalAmountColumn);
@@ -94,6 +103,15 @@ public class ManageBillsView extends BorderPane {
         btnRemove.setPrefWidth(100);
         showAllButton.setPrefWidth(100);
         searchButton2.setPrefWidth(100);
+
+        returnButton.setId("returnButton");
+        btnUpdate.setId("btnUpdate");
+        btnRemove.setId("btnRemove");
+        showAllButton.setId("showAllButton");
+        searchButton2.setId("searchButton2");
+        searchBarTf.setId("searchBarTf");
+        fromDate.setId("fromDate");
+        toDate.setId("toDate");
 
         FileInputStream input = null;
 
