@@ -1,9 +1,8 @@
 package unitTesting.model;
 
 import javafx.application.Platform;
-import javafx.scene.control.Alert;
-import model.Author;
-import model.Gender;
+import model.*;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import util.JavaFXInitializer;
@@ -14,10 +13,18 @@ class AuthorTest {
 
     private Author author;
 
+    @BeforeAll
+    static void set(){
+
+        Platform.startup(() -> {
+            new JavaFXInitializer().init();
+        });
+    }
+
     @BeforeEach
     void setup() {
         author = new Author("John", "Doe", Gender.MALE);
-        new JavaFXInitializer().init();
+
     }
 
     @Test

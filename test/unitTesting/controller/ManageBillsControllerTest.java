@@ -1,5 +1,6 @@
 package unitTesting.controller;
 
+import controller.LoginController;
 import controller.ManageBillsController;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -8,8 +9,10 @@ import javafx.stage.Stage;
 import model.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import util.JavaFXInitializer;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,29 +29,37 @@ public class ManageBillsControllerTest {
 
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
-        // Initialize JavaFX Toolkit
-        CountDownLatch latch = new CountDownLatch(1);
-        Platform.startup(latch::countDown);
-        latch.await();
 
-        // Mock dependencies
-        mockStage = mock(Stage.class);
-        mockUser = mock(UsersOfTheSystem.class);
+        Platform.startup(() -> {
+            // Initialize JavaFX Toolkit
+            CountDownLatch latch = new CountDownLatch(1);
+            Platform.startup(latch::countDown);
+            try {
+                latch.await();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
 
-        // Mock data
-        Author mockAuthor = new Author("John", "Doe", Gender.MALE);
-        mockAuthors = FXCollections.observableArrayList(mockAuthor);
+            // Mock dependencies
+            mockStage = mock(Stage.class);
+            mockUser = mock(UsersOfTheSystem.class);
 
-        Book mockBook = new Book("123456789", "Test Book", "Test Description", 10.99, mockAuthor, true, 10);
-        mockBooks = FXCollections.observableArrayList(mockBook);
+            // Mock data
+            Author mockAuthor = new Author("John", "Doe", Gender.MALE);
+            mockAuthors = FXCollections.observableArrayList(mockAuthor);
 
-        ArrayList<BooksOrdered> mockOrders = new ArrayList<>();
-        mockOrders.add(new BooksOrdered(mockBook.getIsbn(), mockBook.getTitle(), mockBook.getPrice()));
+            Book mockBook = new Book("123456789", "Test Book", "Test Description", 10.99, mockAuthor, true, 10);
+            mockBooks = FXCollections.observableArrayList(mockBook);
 
-        Bill mockBill = new Bill(mockOrders, "user1");
-        mockBills = FXCollections.observableArrayList(mockBill);
+            ArrayList<BooksOrdered> mockOrders = new ArrayList<>();
+            mockOrders.add(new BooksOrdered(mockBook.getIsbn(), mockBook.getTitle(), mockBook.getPrice()));
 
-        mockUsers = FXCollections.observableArrayList(mockUser);
+            Bill mockBill = new Bill(mockOrders, "user1");
+            mockBills = FXCollections.observableArrayList(mockBill);
+
+            mockUsers = FXCollections.observableArrayList(mockUser);
+        });
+
     }
 
     @Test

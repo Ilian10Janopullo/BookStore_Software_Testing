@@ -5,6 +5,7 @@ import model.Admin;
 import model.Gender;
 import model.Role;
 import model.Status;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import util.JavaFXInitializer;
@@ -17,6 +18,14 @@ import static org.mockito.Mockito.*;
 class AdminTest {
 
     private Admin admin;
+
+    @BeforeAll
+    static void set(){
+
+        Platform.startup(() -> {
+            new JavaFXInitializer().init();
+        });
+    }
 
     @BeforeEach
     void setup() {

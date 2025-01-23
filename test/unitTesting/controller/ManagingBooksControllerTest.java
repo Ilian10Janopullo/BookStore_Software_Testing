@@ -1,5 +1,6 @@
 package unitTesting.controller;
 
+import controller.ManagingAuthorsController;
 import controller.ManagingBooksController;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -17,6 +18,7 @@ import util.JavaFXInitializer;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.Mockito.*;
 
 class ManagingBooksControllerTest {
@@ -29,14 +31,16 @@ class ManagingBooksControllerTest {
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
 
-        new JavaFXInitializer().init();
-        books = FXCollections.observableArrayList();
-        books.add(mock(Book.class, CALLS_REAL_METHODS));
-        when(mock(Book.class, CALLS_REAL_METHODS).getIsbn()).thenReturn("9780-59-65-2068-8");
+        Platform.startup(() -> {
+            new JavaFXInitializer().init();
+            books = FXCollections.observableArrayList();
+            books.add(mock(Book.class, CALLS_REAL_METHODS));
+            when(mock(Book.class, CALLS_REAL_METHODS).getIsbn()).thenReturn("9780-59-65-2068-8");
 
-        mockStage = mock(Stage.class);
-        mockUser = mock(UsersOfTheSystem.class);
-        when(mockUser.getRole()).thenReturn(Role.ADMIN);
+            mockStage = mock(Stage.class);
+            mockUser = mock(UsersOfTheSystem.class);
+            when(mockUser.getRole()).thenReturn(Role.ADMIN);
+        });
 
     }
 

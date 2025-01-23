@@ -1,8 +1,11 @@
 package unitTesting.model;
 
+import javafx.application.Platform;
 import model.BooksOrdered;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import util.JavaFXInitializer;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -12,6 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class BooksOrderedTest {
 
     private BooksOrdered booksOrdered;
+
+    @BeforeAll
+    static void set(){
+
+        Platform.startup(() -> {
+            new JavaFXInitializer().init();
+        });
+    }
 
     @BeforeEach
     void setup() {

@@ -1,14 +1,25 @@
 package unitTesting.model;
 
+import javafx.application.Platform;
 import model.Bill;
 import model.BooksOrdered;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import util.JavaFXInitializer;
 
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BillTest {
+
+    @BeforeAll
+    static void set(){
+
+        Platform.startup(() -> {
+            new JavaFXInitializer().init();
+        });
+    }
 
     @Test
     void testBillConstructor() {

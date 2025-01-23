@@ -2,8 +2,10 @@ package unitTesting.controller;
 
 import controller.ManageUsersController;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
 import javafx.scene.control.Alert;
-import model.UsersOfTheSystem;
+import javafx.stage.Stage;
+import model.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -11,6 +13,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import util.JavaFXInitializer;
+
+import java.util.ArrayList;
+import java.util.concurrent.CountDownLatch;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -21,8 +26,12 @@ public class ManagerUsersControllerTest {
 
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
-        new JavaFXInitializer().init(); // Initialize JavaFX for UI components
-        controller = mock(ManageUsersController.class, CALLS_REAL_METHODS); // Mock the controller
+
+        Platform.startup(() -> {
+            new JavaFXInitializer().init(); // Initialize JavaFX for UI components
+            controller = mock(ManageUsersController.class, CALLS_REAL_METHODS); // Mock the controller
+        });
+
     }
 
     @BeforeEach

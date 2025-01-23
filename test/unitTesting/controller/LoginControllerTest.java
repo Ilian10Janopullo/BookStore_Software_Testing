@@ -4,6 +4,7 @@ import controller.LoginController;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.stage.Stage;
 import model.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -24,14 +25,18 @@ public class LoginControllerTest {
 
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
-        new JavaFXInitializer().init(); // Initialize JavaFX for UI components
-        mockUsers = FXCollections.observableArrayList();
 
-        // Create a real instance of LoginController
-        controller = new LoginController(new javafx.stage.Stage());
-        mockUsers.add(new Admin("Admin", "User", new Date(), model.Gender.MALE, "admin", "password", Role.ADMIN, "admin@example.com", "1234567890", 5000));
-        mockUsers.add(new Manager("Manager", "User", new Date(), model.Gender.FEMALE, "manager", "password123", Role.MANAGER, "manager@example.com", "0987654321", 4000));
-        mockUsers.add(new Librarian("Librarian", "User", new Date(), Gender.MALE, "librarian", "libPass", Role.LIBRARIAN, "librarian@example.com", "1122334455", 3000));
+        Platform.startup(() -> {
+            new JavaFXInitializer().init(); // Initialize JavaFX for UI components
+            mockUsers = FXCollections.observableArrayList();
+
+            // Create a real instance of LoginController
+            controller = new LoginController(new javafx.stage.Stage());
+            mockUsers.add(new Admin("Admin", "User", new Date(), model.Gender.MALE, "admin", "password", Role.ADMIN, "admin@example.com", "1234567890", 5000));
+            mockUsers.add(new Manager("Manager", "User", new Date(), model.Gender.FEMALE, "manager", "password123", Role.MANAGER, "manager@example.com", "0987654321", 4000));
+            mockUsers.add(new Librarian("Librarian", "User", new Date(), Gender.MALE, "librarian", "libPass", Role.LIBRARIAN, "librarian@example.com", "1122334455", 3000));
+        });
+
     }
 
     @ParameterizedTest

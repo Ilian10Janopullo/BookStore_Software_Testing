@@ -8,6 +8,7 @@ import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import model.Book;
 import model.BooksOrdered;
+import model.Role;
 import model.UsersOfTheSystem;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -26,9 +27,13 @@ class BillCreatorControllerTest {
 
     @BeforeAll
     static void setUpClass() {
-        new JavaFXInitializer().init();
-        book = mock(Book.class, CALLS_REAL_METHODS);
-        when(book.getQuantity()).thenReturn(10);
+
+        Platform.startup(() -> {
+            new JavaFXInitializer().init();
+            book = mock(Book.class, CALLS_REAL_METHODS);
+            when(book.getQuantity()).thenReturn(10);
+        });
+
     }
 
     @BeforeEach

@@ -87,3 +87,9 @@ Book : Keshtjella	 Price : 10.0	 Quantity : 3
 Book : Bageti e Bujqesi	 Price : 12.0	 Quantity : 1
 Total : 42.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bill ID : 5eb5a062-cb09-49c3-90ba-d0cb48a91258
+User ID : b415e79d-bfb4-4bdc-9949-a29bbac59e0f
+Date/Time : Thu Jan 23 15:26:15 CET 2025
+Book : Bageti e Bujqesi	 Price : 12.0	 Quantity : 2
+Total : 24.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

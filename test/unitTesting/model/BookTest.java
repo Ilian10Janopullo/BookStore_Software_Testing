@@ -9,6 +9,7 @@ import model.Author;
 import model.Book;
 import model.Gender;
 import model.Genre;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -24,6 +25,14 @@ class BookTest {
 
     private Author mockAuthor;
     private AuthorsDAO mockAuthorsDAO;
+
+    @BeforeAll
+    static void set(){
+
+        Platform.startup(() -> {
+            new JavaFXInitializer().init();
+        });
+    }
 
     @BeforeEach
     void setup() {
