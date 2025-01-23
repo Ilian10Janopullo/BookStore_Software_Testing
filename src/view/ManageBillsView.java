@@ -300,6 +300,10 @@ public class ManageBillsView extends BorderPane {
         revenueLb2.setText(string);
     }
 
+    public Label getRevenueTF() {
+        return revenueLb2;
+    }
+
     public void setSearchBarTf() {
         searchBarTf.setText("");
     }
