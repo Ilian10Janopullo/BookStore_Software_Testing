@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
-      <change afterPath="$PROJECT_DIR$/test/integrationTesting/BillCreatorControllerTestReview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/authors.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/authors.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/bills.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/bills.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/billsPrinted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/database/billsPrinted.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/books.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/books.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/users.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/BillCreatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/BillCreatorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BillsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BillsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BooksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BooksDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UsersDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +78,7 @@
     "JUnit.BillCreatorControllerTest.checkQuantityECT.executor": "Run",
     "JUnit.BillCreatorControllerTest.checkQuantityStatement.executor": "Run",
     "JUnit.BillCreatorControllerTest.executor": "Run",
-    "JUnit.BillCreatorControllerTestReview.executor": "Debug",
+    "JUnit.BillCreatorControllerTestReview.executor": "Run",
     "JUnit.BillCreatorControllerTestReview.submitDuplicateBill.executor": "Run",
     "JUnit.BillCreatorControllerTestReview.submitInvalidReview.executor": "Run",
     "JUnit.BillCreatorControllerTestReview.submitValidBill.executor": "Run",
@@ -193,7 +186,7 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AuthorsDAOTest">
+  <component name="RunManager" selected="JUnit.BillCreatorControllerTestReview.submitValidBill">
     <configuration name="BookStore" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="BookStore_Ilian_Janopullo" />
@@ -331,11 +324,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AuthorsDAOTest" />
         <item itemvalue="JUnit.BillCreatorControllerTestReview.submitValidBill" />
+        <item itemvalue="JUnit.BillCreatorControllerTestReview" />
+        <item itemvalue="JUnit.AuthorsDAOTest" />
         <item itemvalue="JUnit.BillCreatorControllerTestReview.submitDuplicateBill" />
         <item itemvalue="JUnit.BillCreatorControllerTestReview.submitInvalidReview" />
-        <item itemvalue="JUnit.BillCreatorControllerTestReview" />
       </list>
     </recent_temporary>
   </component>
@@ -409,7 +402,7 @@
       <workItem from="1737461895777" duration="6680000" />
       <workItem from="1737635890920" duration="1598000" />
       <workItem from="1737643206262" duration="3186000" />
-      <workItem from="1737661220326" duration="10278000" />
+      <workItem from="1737661220326" duration="10579000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />

@@ -171,6 +171,16 @@ public class BillCreatorControllerTestReview {
                     () -> Assertions.assertEquals(35.0, usersDAO.getAll().getFirst().getRevenueMade())
             );
 
+            try {
+                Files.deleteIfExists(Path.of(AuthorsDAO.FILE_PATH));
+                Files.deleteIfExists(Path.of(BillsDAO.FILE_PATH));
+                Files.createFile(Path.of(BooksDAO.FILE_PATH));
+                Files.createFile(Path.of(AuthorsDAO.FILE_PATH));
+                Files.createFile(Path.of(BillsDAO.FILE_PATH));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
         });
 
     }
