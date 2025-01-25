@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/authors.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/authors.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/books.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/books.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/users.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integrationTesting/BillCreatorControllerTestReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/integrationTesting/BillCreatorControllerTestReview.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +78,7 @@
     "JUnit.BillCreatorControllerTest.executor": "Run",
     "JUnit.BillCreatorControllerTestReview.executor": "Run",
     "JUnit.BillCreatorControllerTestReview.submitDuplicateBill.executor": "Run",
+    "JUnit.BillCreatorControllerTestReview.submitInvalidBill.executor": "Run",
     "JUnit.BillCreatorControllerTestReview.submitInvalidReview.executor": "Run",
     "JUnit.BillCreatorControllerTestReview.submitValidBill.executor": "Run",
     "JUnit.BillCreatorSystemTest.executor": "Run",
@@ -186,7 +185,7 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BillCreatorControllerTestReview.submitValidBill">
+  <component name="RunManager" selected="JUnit.BillCreatorControllerTestReview.submitInvalidBill">
     <configuration name="BookStore" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="BookStore_Ilian_Janopullo" />
@@ -241,7 +240,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillCreatorControllerTestReview.submitInvalidReview" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BillCreatorControllerTestReview.submitInvalidBill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookStore_Ilian_Janopullo" />
       <extension name="coverage">
         <pattern>
@@ -251,7 +250,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="integrationTesting" />
       <option name="MAIN_CLASS_NAME" value="integrationTesting.BillCreatorControllerTestReview" />
-      <option name="METHOD_NAME" value="submitInvalidReview" />
+      <option name="METHOD_NAME" value="submitInvalidBill" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -269,23 +268,6 @@
       <option name="MAIN_CLASS_NAME" value="integrationTesting.BillCreatorControllerTestReview" />
       <option name="METHOD_NAME" value="submitValidBill" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BillCreatorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookStore_Ilian_Janopullo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unitTesting.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="unitTesting.controller" />
-      <option name="MAIN_CLASS_NAME" value="unitTesting.controller.BillCreatorControllerTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\User\Softwares\javafx-sdk-23.0.1\lib --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -316,19 +298,19 @@
       <item itemvalue="Application.BookStore" />
       <item itemvalue="JUnit.ManagingBooksControllerTest" />
       <item itemvalue="JUnit.ManagingAuthorsControllerTest" />
+      <item itemvalue="JUnit.BillCreatorControllerTestReview.submitInvalidBill" />
       <item itemvalue="JUnit.BillCreatorControllerTestReview" />
       <item itemvalue="JUnit.BillCreatorControllerTestReview.submitDuplicateBill" />
-      <item itemvalue="JUnit.BillCreatorControllerTestReview.submitInvalidReview" />
       <item itemvalue="JUnit.BillCreatorControllerTestReview.submitValidBill" />
       <item itemvalue="JUnit.AuthorsDAOTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BillCreatorControllerTestReview.submitInvalidBill" />
+        <item itemvalue="JUnit.BillCreatorControllerTestReview.submitDuplicateBill" />
         <item itemvalue="JUnit.BillCreatorControllerTestReview.submitValidBill" />
         <item itemvalue="JUnit.BillCreatorControllerTestReview" />
         <item itemvalue="JUnit.AuthorsDAOTest" />
-        <item itemvalue="JUnit.BillCreatorControllerTestReview.submitDuplicateBill" />
-        <item itemvalue="JUnit.BillCreatorControllerTestReview.submitInvalidReview" />
       </list>
     </recent_temporary>
   </component>
@@ -402,7 +384,8 @@
       <workItem from="1737461895777" duration="6680000" />
       <workItem from="1737635890920" duration="1598000" />
       <workItem from="1737643206262" duration="3186000" />
-      <workItem from="1737661220326" duration="10579000" />
+      <workItem from="1737661220326" duration="10687000" />
+      <workItem from="1737838382507" duration="567000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />

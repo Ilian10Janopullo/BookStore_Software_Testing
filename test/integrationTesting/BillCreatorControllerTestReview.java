@@ -71,12 +71,12 @@ public class BillCreatorControllerTestReview {
             BillCreatorController controller = new BillCreatorController(stage, user);
             controller.setOrders(invalidOrderOfBooks);
 
-            Alert mockAlert = mock(Alert.class);
-            controller.setAlertFactory(type -> mockAlert);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            controller.setAlertFactory(type -> alert);
 
             controller.Submit(new ActionEvent());
 
-            verify(mockAlert, times(1)).show();
+            verify(alert, times(1)).show();
         });
     }
 
@@ -97,12 +97,12 @@ public class BillCreatorControllerTestReview {
             BillCreatorController controller = new BillCreatorController(stage, user);
             controller.setOrders(duplicateOrderOfBooks);
 
-            Alert mockAlert = mock(Alert.class);
-            controller.setAlertFactory(type -> mockAlert);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            controller.setAlertFactory(type -> alert);
 
             controller.Submit(new ActionEvent());
 
-            verify(mockAlert, times(1)).show();
+            verify(alert, times(1)).show();
         });
     }
 
@@ -161,7 +161,8 @@ public class BillCreatorControllerTestReview {
 
 
             Assertions.assertAll(
-                    () -> Assertions.assertEquals(1, billsDAO.getAll().size()),
+                    () -> Assertions.assertFalse(BillPrintingDAO.FILE_PATH.isEmpty()), //I cannot check what is in the file for the bill, because of the billID which gets generated randomly, but I can check it by this statement
+                    () -> Assertions.assertEquals(1, billsDAO.getAll().size()), //The same thing also applies here
                     () -> Assertions.assertEquals(2, authorsDAO.getAll().getFirst().getNrOfBooksSold()),
                     () -> Assertions.assertEquals(1, booksDAO.getAll().getFirst().getQuantity()),
                     () -> Assertions.assertEquals(1, booksDAO.getAll().getFirst().getCopiesSold()),
