@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e19f6fd4-4743-4c08-b394-3a6b0a07817b" name="Changes" comment="Update after Static Testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/authors.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/authors.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/billsPrinted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/database/billsPrinted.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/books.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/books.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/users.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/integrationTesting/BillCreatorControllerTestReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/integrationTesting/BillCreatorControllerTestReview.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,117 +58,117 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BookStore.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.AdminMenuControllerTest.executor": "Run",
-    "JUnit.AdminMenuControllerTest.testControlPermissions.executor": "Run",
-    "JUnit.AdminMenuControllerTest.testManageBooksWarningForNoAuthors.executor": "Run",
-    "JUnit.AdminMenuSystemTest.executor": "Run",
-    "JUnit.AdminMenuViewTest.executor": "Run",
-    "JUnit.AdminTest.executor": "Run",
-    "JUnit.AuthorTest.executor": "Run",
-    "JUnit.AuthorsDAOTest.executor": "Run",
-    "JUnit.AuthorsDAOTest.testDeleteNonexistentAuthor.executor": "Debug",
-    "JUnit.BackFunctionMenuTest.executor": "Run",
-    "JUnit.BillCreatorControllerTest (1).executor": "Run",
-    "JUnit.BillCreatorControllerTest.checkQuantity.executor": "Run",
-    "JUnit.BillCreatorControllerTest.checkQuantityBDV.executor": "Run",
-    "JUnit.BillCreatorControllerTest.checkQuantityECT (1).executor": "Run",
-    "JUnit.BillCreatorControllerTest.checkQuantityECT.executor": "Run",
-    "JUnit.BillCreatorControllerTest.checkQuantityStatement.executor": "Run",
-    "JUnit.BillCreatorControllerTest.executor": "Run",
-    "JUnit.BillCreatorControllerTestReview.executor": "Run",
-    "JUnit.BillCreatorControllerTestReview.submitDuplicateBill.executor": "Run",
-    "JUnit.BillCreatorControllerTestReview.submitInvalidBill.executor": "Run",
-    "JUnit.BillCreatorControllerTestReview.submitInvalidReview.executor": "Run",
-    "JUnit.BillCreatorControllerTestReview.submitValidBill.executor": "Run",
-    "JUnit.BillCreatorSystemTest.executor": "Run",
-    "JUnit.BillCreatorViewTest.executor": "Run",
-    "JUnit.BillPrintingDAOTest.executor": "Run",
-    "JUnit.BillTest.executor": "Run",
-    "JUnit.BookTest.executor": "Run",
-    "JUnit.BookTest.testSetAndGetAuthor.executor": "Run",
-    "JUnit.BooksDAOTest.executor": "Run",
-    "JUnit.BooksOrderedTest.executor": "Run",
-    "JUnit.BooksOrderedTest.testEqualsWithMatchingObjects.executor": "Debug",
-    "JUnit.CheckUsersControllerTest.executor": "Run",
-    "JUnit.CheckUsersSystemTest.executor": "Run",
-    "JUnit.DaoImplementationTest.executor": "Run",
-    "JUnit.HeaderlessObjectOutputStreamTest.executor": "Run",
-    "JUnit.LibrarianTest.executor": "Run",
-    "JUnit.LoadFromFileImplementationTest.executor": "Run",
-    "JUnit.LoginControllerTest.executor": "Run",
-    "JUnit.LoginSystemTest.executor": "Run",
-    "JUnit.LoginSystemTesting.executor": "Run",
-    "JUnit.LoginViewTest.executor": "Run",
-    "JUnit.ManageAuthorSystemTest.executor": "Run",
-    "JUnit.ManageAuthorSystemTest.testSearchAndBackFunction.executor": "Run",
-    "JUnit.ManageBillsControllerTest.executor": "Run",
-    "JUnit.ManageBillsSystemTest.executor": "Run",
-    "JUnit.ManageBillsSystemTest.testDeleteBillFlow.executor": "Run",
-    "JUnit.ManageBillsSystemTest.testEditBillFlow.executor": "Run",
-    "JUnit.ManageBillsViewTest.executor": "Run",
-    "JUnit.ManageBookSystemTest.executor": "Run",
-    "JUnit.ManageBookSystemTest.testAddBookFlow.executor": "Run",
-    "JUnit.ManageUserSystemTest.executor": "Run",
-    "JUnit.ManageUserSystemTest.testDeleteUserFlow.executor": "Run",
-    "JUnit.ManageUserSystemTest.testEditUserFlow.executor": "Run",
-    "JUnit.ManageUserSystemTest.testSearchAndBackFunction.executor": "Run",
-    "JUnit.ManagerTest.executor": "Run",
-    "JUnit.ManagerUsersControllerTest.executor": "Run",
-    "JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence (1).executor": "Run",
-    "JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence.executor": "Run",
-    "JUnit.ManagerUsersControllerTest.testEquivalencePartitioning.executor": "Run",
-    "JUnit.ManagingAuthorsControllerTest (1).executor": "Run",
-    "JUnit.ManagingAuthorsControllerTest.executor": "Run",
-    "JUnit.ManagingBooksControllerTest (1).executor": "Run",
-    "JUnit.ManagingBooksControllerTest.checkIsbn.executor": "Run",
-    "JUnit.ManagingBooksControllerTest.checkIsbnBranch (1).executor": "Run",
-    "JUnit.ManagingBooksControllerTest.checkIsbnBranch.executor": "Run",
-    "JUnit.ManagingBooksControllerTest.checkIsbnCondition.executor": "Run",
-    "JUnit.ManagingBooksControllerTest.checkIsbnECT.executor": "Run",
-    "JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1).executor": "Run",
-    "JUnit.ManagingBooksControllerTest.checkIsbnMCDC.executor": "Run",
-    "JUnit.ManagingBooksControllerTest.checkIsbnStatement.executor": "Coverage",
-    "JUnit.ManagingBooksControllerTest.executor": "Run",
-    "JUnit.PermissionCombo11SystemTest.executor": "Run",
-    "JUnit.PermissionCombo15ControllerTest.executor": "Run",
-    "JUnit.PermissionCombo2SystemTest.executor": "Run",
-    "JUnit.PermissionsDAOTest.executor": "Run",
-    "JUnit.SetPermissionsViewTest.executor": "Run",
-    "JUnit.SetUpPermissionsControllerTest.executor": "Run",
-    "JUnit.TableManagingUsersViewTest.executor": "Run",
-    "JUnit.TableViewCheckingUsersTest.executor": "Run",
-    "JUnit.UsersDAOTest.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "ignore.preview.features.used": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/BookStore_Software_Testing/database",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15475024",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pathVariables",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BookStore.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.AdminMenuControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdminMenuControllerTest.testControlPermissions.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdminMenuControllerTest.testManageBooksWarningForNoAuthors.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdminMenuSystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdminMenuViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdminTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthorsDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthorsDAOTest.testDeleteNonexistentAuthor.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.BackFunctionMenuTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTest.checkQuantity.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTest.checkQuantityBDV.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTest.checkQuantityECT (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTest.checkQuantityECT.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTest.checkQuantityStatement.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTestReview.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTestReview.submitDuplicateBill.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTestReview.submitInvalidBill.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTestReview.submitInvalidReview.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorControllerTestReview.submitValidBill.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorSystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillCreatorViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillPrintingDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BillTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BookTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BookTest.testSetAndGetAuthor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BooksDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BooksOrderedTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BooksOrderedTest.testEqualsWithMatchingObjects.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CheckUsersControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CheckUsersSystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DaoImplementationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HeaderlessObjectOutputStreamTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibrarianTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoadFromFileImplementationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoginControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoginSystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoginSystemTesting.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoginViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageAuthorSystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageAuthorSystemTest.testSearchAndBackFunction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageBillsControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageBillsSystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageBillsSystemTest.testDeleteBillFlow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageBillsSystemTest.testEditBillFlow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageBillsViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageBookSystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageBookSystemTest.testAddBookFlow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageUserSystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageUserSystemTest.testDeleteUserFlow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageUserSystemTest.testEditUserFlow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageUserSystemTest.testSearchAndBackFunction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagerUsersControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagerUsersControllerTest.testCheckBirthdateEquivalence.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagerUsersControllerTest.testEquivalencePartitioning.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingAuthorsControllerTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingAuthorsControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingBooksControllerTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingBooksControllerTest.checkIsbn.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingBooksControllerTest.checkIsbnBranch (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingBooksControllerTest.checkIsbnBranch.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingBooksControllerTest.checkIsbnCondition.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingBooksControllerTest.checkIsbnECT.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingBooksControllerTest.checkIsbnMCDC (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingBooksControllerTest.checkIsbnMCDC.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManagingBooksControllerTest.checkIsbnStatement.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ManagingBooksControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PermissionCombo11SystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PermissionCombo15ControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PermissionCombo2SystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PermissionsDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SetPermissionsViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SetUpPermissionsControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TableManagingUsersViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TableViewCheckingUsersTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsersDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/BookStore_Software_Testing/database&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15475024&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\BookStore_Software_Testing\database" />
@@ -185,7 +189,7 @@
       <recent name="controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BillCreatorControllerTestReview.submitInvalidBill">
+  <component name="RunManager" selected="JUnit.BillCreatorControllerTestReview.submitValidBill">
     <configuration name="BookStore" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="BookStore_Ilian_Janopullo" />
@@ -306,9 +310,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BillCreatorControllerTestReview.submitValidBill" />
         <item itemvalue="JUnit.BillCreatorControllerTestReview.submitInvalidBill" />
         <item itemvalue="JUnit.BillCreatorControllerTestReview.submitDuplicateBill" />
-        <item itemvalue="JUnit.BillCreatorControllerTestReview.submitValidBill" />
         <item itemvalue="JUnit.BillCreatorControllerTestReview" />
         <item itemvalue="JUnit.AuthorsDAOTest" />
       </list>
@@ -385,7 +389,8 @@
       <workItem from="1737635890920" duration="1598000" />
       <workItem from="1737643206262" duration="3186000" />
       <workItem from="1737661220326" duration="10687000" />
-      <workItem from="1737838382507" duration="567000" />
+      <workItem from="1737838382507" duration="619000" />
+      <workItem from="1737997618162" duration="1282000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />

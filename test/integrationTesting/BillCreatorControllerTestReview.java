@@ -161,8 +161,11 @@ public class BillCreatorControllerTestReview {
 
 
             Assertions.assertAll(
-                    () -> Assertions.assertFalse(BillPrintingDAO.FILE_PATH.isEmpty()), //I cannot check what is in the file for the bill, because of the billID which gets generated randomly, but I can check it by this statement
-                    () -> Assertions.assertEquals(1, billsDAO.getAll().size()), //The same thing also applies here
+                    () -> Assertions.assertFalse(BillPrintingDAO.FILE_PATH.isEmpty()), //check if the bill is stored at the bills.txt files
+                    //There is no way to check the retrieval from the text file of the bills, because there is no function that gets what is inside of that file, due to the fact that it was intended only for writing the bills and getting a visual aspect of them
+                    //Because for the retrieval of the bills, only the binary file is used, which is tested below
+                    () -> Assertions.assertEquals(1, billsDAO.getAll().size()), //check if bill is stored
+                    () -> Assertions.assertTrue(billsDAO.getAll().getFirst().getBooks().contains(validOrderOfBooks.getFirst()) && billsDAO.getAll().getFirst().getBooks().contains(validOrderOfBooks.get(1))), //checks the retrieval from the binary file of the bills
                     () -> Assertions.assertEquals(2, authorsDAO.getAll().getFirst().getNrOfBooksSold()),
                     () -> Assertions.assertEquals(1, booksDAO.getAll().getFirst().getQuantity()),
                     () -> Assertions.assertEquals(1, booksDAO.getAll().getFirst().getCopiesSold()),
