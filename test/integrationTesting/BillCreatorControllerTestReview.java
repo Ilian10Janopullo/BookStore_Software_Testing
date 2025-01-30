@@ -13,8 +13,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import util.JavaFXInitializer;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -42,10 +40,10 @@ public class BillCreatorControllerTestReview {
 
             stage = new Stage();
             Calendar calendar= new GregorianCalendar();
-            user =new Admin("Ilian", "Janopullo", calendar.getTime(), Gender.MALE, "ijanopullo22", "1234", Role.ADMIN, "ijanopullo22@gmail.com", "0695383073", 700);
+            user =new Admin("Integration", "Test", calendar.getTime(), Gender.MALE, "integrationTest25", "@Integration2025", Role.ADMIN, "itest25@gmail.com", "0695383074", 1000);
 
 
-            author = new Author("TestFirstName", "TestLastName", Gender.MALE);
+            author = new Author("Integration", "Test", Gender.MALE);
 
             book1 = new Book("9928-186-59-1", "Book 1", "A description for Book 1", 20.00, author, true, 2);
             book2 = new Book("9789992755067", "Book 2", "A description for Book 2", 15.00, author, true, 10);
@@ -113,27 +111,6 @@ public class BillCreatorControllerTestReview {
 
             Path tempFilePath = null;
 
-            try {
-
-                tempFilePath = Files.createTempFile("test_authors", ".dat");
-                AuthorsDAO.FILE_PATH = tempFilePath.toString();
-
-                tempFilePath = Files.createTempFile("test_books", ".dat");
-                BooksDAO.FILE_PATH = tempFilePath.toString();
-
-                tempFilePath = Files.createTempFile("test_bills", ".dat");
-                BillsDAO.FILE_PATH = tempFilePath.toString();
-
-                tempFilePath = Files.createTempFile("test_users", ".dat");
-                UsersDAO.FILE_PATH = tempFilePath.toString();
-
-                tempFilePath = Files.createTempFile("test_bills_printing", ".txt");
-                BillPrintingDAO.FILE_PATH = tempFilePath.toString();
-
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
             BooksDAO booksDAO = new BooksDAO();
             AuthorsDAO authorsDAO = new AuthorsDAO();
             UsersDAO usersDAO = new UsersDAO();
@@ -156,6 +133,8 @@ public class BillCreatorControllerTestReview {
             booksOrdered.setQuantityToOrder(1);
             validOrderOfBooks.add(booksOrdered);
 
+            int billsDAOSize = billsDAO.getAll().size();
+
             BillCreatorController controller = new BillCreatorController(stage, user);
             controller.setOrders(validOrderOfBooks);
 
@@ -164,26 +143,16 @@ public class BillCreatorControllerTestReview {
                     () -> Assertions.assertFalse(BillPrintingDAO.FILE_PATH.isEmpty()), //check if the bill is stored at the bills.txt files
                     //There is no way to check the retrieval from the text file of the bills, because there is no function that gets what is inside of that file, due to the fact that it was intended only for writing the bills and getting a visual aspect of them
                     //Because for the retrieval of the bills, only the binary file is used, which is tested below
-                    () -> Assertions.assertEquals(1, billsDAO.getAll().size()), //check if bill is stored
-                    () -> Assertions.assertTrue(billsDAO.getAll().getFirst().getBooks().contains(validOrderOfBooks.getFirst()) && billsDAO.getAll().getFirst().getBooks().contains(validOrderOfBooks.get(1))), //checks the retrieval from the binary file of the bills
-                    () -> Assertions.assertEquals(2, authorsDAO.getAll().getFirst().getNrOfBooksSold()),
-                    () -> Assertions.assertEquals(1, booksDAO.getAll().getFirst().getQuantity()),
-                    () -> Assertions.assertEquals(1, booksDAO.getAll().getFirst().getCopiesSold()),
+                    () -> Assertions.assertEquals(billsDAOSize + 1, billsDAO.getAll().size()), //check if bill is stored
+                    () -> Assertions.assertTrue(billsDAO.getAll().getLast().getBooks().contains(validOrderOfBooks.getFirst()) && billsDAO.getAll().getFirst().getBooks().contains(validOrderOfBooks.get(1))), //checks the retrieval from the binary file of the bills
+                    () -> Assertions.assertEquals(2, authorsDAO.getAll().getLast().getNrOfBooksSold()),
+                    () -> Assertions.assertEquals(1, booksDAO.getAll().getLast().getQuantity()),
+                    () -> Assertions.assertEquals(1, booksDAO.getAll().getLast().getCopiesSold()),
                     () -> Assertions.assertEquals(9, booksDAO.getAll().getLast().getQuantity()),
                     () -> Assertions.assertEquals(1, booksDAO.getAll().getLast().getCopiesSold()),
-                    () -> Assertions.assertEquals(2, usersDAO.getAll().getFirst().getNrOfBooksSold()),
-                    () -> Assertions.assertEquals(35.0, usersDAO.getAll().getFirst().getRevenueMade())
+                    () -> Assertions.assertEquals(2, usersDAO.getAll().getLast().getNrOfBooksSold()),
+                    () -> Assertions.assertEquals(35.0, usersDAO.getAll().getLast().getRevenueMade())
             );
-
-            try {
-                Files.deleteIfExists(Path.of(AuthorsDAO.FILE_PATH));
-                Files.deleteIfExists(Path.of(BillsDAO.FILE_PATH));
-                Files.createFile(Path.of(BooksDAO.FILE_PATH));
-                Files.createFile(Path.of(AuthorsDAO.FILE_PATH));
-                Files.createFile(Path.of(BillsDAO.FILE_PATH));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
 
         });
 
