@@ -144,10 +144,10 @@ public class BillCreatorControllerTestReview {
                     //There is no way to check the retrieval from the text file of the bills, because there is no function that gets what is inside of that file, due to the fact that it was intended only for writing the bills and getting a visual aspect of them
                     //Because for the retrieval of the bills, only the binary file is used, which is tested below
                     () -> Assertions.assertEquals(billsDAOSize + 1, billsDAO.getAll().size()), //check if bill is stored
-                    () -> Assertions.assertTrue(billsDAO.getAll().getLast().getBooks().contains(validOrderOfBooks.getFirst()) && billsDAO.getAll().getFirst().getBooks().contains(validOrderOfBooks.get(1))), //checks the retrieval from the binary file of the bills
+                    () -> Assertions.assertTrue(billsDAO.getAll().getLast().getBooks().contains(validOrderOfBooks.getFirst()) && billsDAO.getAll().getLast().getBooks().contains(validOrderOfBooks.get(1))), //checks the retrieval from the binary file of the bills
                     () -> Assertions.assertEquals(2, authorsDAO.getAll().getLast().getNrOfBooksSold()),
-                    () -> Assertions.assertEquals(1, booksDAO.getAll().getLast().getQuantity()),
-                    () -> Assertions.assertEquals(1, booksDAO.getAll().getLast().getCopiesSold()),
+                    () -> Assertions.assertEquals(1, booksDAO.getAll().get(booksDAO.getAll().size()-2).getQuantity()),
+                    () -> Assertions.assertEquals(1, booksDAO.getAll().get(booksDAO.getAll().size()-2).getCopiesSold()),
                     () -> Assertions.assertEquals(9, booksDAO.getAll().getLast().getQuantity()),
                     () -> Assertions.assertEquals(1, booksDAO.getAll().getLast().getCopiesSold()),
                     () -> Assertions.assertEquals(2, usersDAO.getAll().getLast().getNrOfBooksSold()),
