@@ -67,6 +67,8 @@ public class ManagingBooksControllerTest {
 
             Assertions.assertEquals(initialSize + 1, booksDAO.getAll().size(), "Book size increment");
             Assertions.assertTrue(booksDAO.getAll().contains(testBook), "Added Book in found in database");
+            Assertions.assertEquals(5,booksDAO.getAll().getLast().getQuantity());
+            Assertions.assertEquals(1,authorsDAO.getAll().getLast().getNrOfBooks());
         });
     }
 
