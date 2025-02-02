@@ -13,6 +13,7 @@ import model.*;
 import view.TableViewManagingBooks;
 
 import java.util.ArrayList;
+import java.util.function.Function;
 
 public class ManagingBooksController {
     private static ObservableList<String> permissionsCombo;
@@ -21,6 +22,7 @@ public class ManagingBooksController {
     private final FilteredList<Book> filteredBooks;
     private final Stage stage;
     private final UsersOfTheSystem user;
+    private static Function<Alert.AlertType, Alert> alertFactory = Alert::new;
     private final BooksDAO booksDAO;
     private final ObservableList<Book> books;
     private final ObservableList<Author> authors;
@@ -482,5 +484,9 @@ public class ManagingBooksController {
     }
     private void backFunction(int i){
         BackFunctionMenu.mainMenuBack(i, permissionsCombo, stage, user);
+    }
+
+    public void setAlertFactory(Function<Alert.AlertType, Alert> alertFactory) {
+        ManagingBooksController.alertFactory = alertFactory;
     }
 }
